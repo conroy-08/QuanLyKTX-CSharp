@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21833AAC-4E53-4FAB-ABD5-349165F6CEBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyKTX</RootNamespace>
+    <AssemblyName>QuanLyKTX</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="HoaDon\HoaDon_BLL.cs" />
+    <Compile Include="HoaDon\HoaDon_DAL.cs" />
+    <Compile Include="HoaDon\HoaDon_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon\HoaDon_GUI.Designer.cs">
+      <DependentUpon>HoaDon_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\Khoa_BLL.cs" />
+    <Compile Include="Khoa\Khoa_DAL.cs" />
+    <Compile Include="Khoa\Khoa_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\Khoa_GUI.Designer.cs">
+      <DependentUpon>Khoa_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhuNha\KhuNha_BLL.cs" />
+    <Compile Include="KhuNha\KhuNha_DAL.cs" />
+    <Compile Include="KhuNha\KhuNha_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhuNha\KhuNha_GUI.Designer.cs">
+      <DependentUpon>KhuNha_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lop\Lop_BLL.cs" />
+    <Compile Include="Lop\Lop_DAL.cs" />
+    <Compile Include="Lop\Lop_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lop\Lop_GUI.Designer.cs">
+      <DependentUpon>Lop_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phong\Phong_BLL.cs" />
+    <Compile Include="Phong\Phong_DAL.cs" />
+    <Compile Include="Phong\Phong_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phong\Phong_GUI.Designer.cs">
+      <DependentUpon>Phong_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Que\Que_BLL.cs" />
+    <Compile Include="Que\Que_DAL.cs" />
+    <Compile Include="Que\Que_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Que\Que_GUI.Designer.cs">
+      <DependentUpon>Que_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\SinhVien_BLL.cs" />
+    <Compile Include="SinhVien\SinhVien_DAL.cs" />
+    <Compile Include="SinhVien\SinhVien_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\SinhVien_GUI.Designer.cs">
+      <DependentUpon>SinhVien_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThietBi\ThietBi_BLL.cs" />
+    <Compile Include="ThietBi\ThietBi_DAL.cs" />
+    <Compile Include="ThietBi\ThietBi_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThietBi\ThietBi_GUI.Designer.cs">
+      <DependentUpon>ThietBi_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThietBi_Phong\ThietBi_Phong_BLL.cs" />
+    <Compile Include="ThietBi_Phong\ThietBi_Phong_DAL.cs" />
+    <Compile Include="ThietBi_Phong\ThietBi_Phong_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThietBi_Phong\ThietBi_Phong_GUI.Designer.cs">
+      <DependentUpon>ThietBi_Phong_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\TimKiem_BLL.cs" />
+    <Compile Include="TimKiem\TimKiem_DAL.cs" />
+    <Compile Include="TimKiem\TimKiem_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiem\TimKiem_GUI.Designer.cs">
+      <DependentUpon>TimKiem_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongQuan_GioiThieu\TongQuan_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TongQuan_GioiThieu\TongQuan_GUI.Designer.cs">
+      <DependentUpon>TongQuan_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrangChu_BLL.cs" />
+    <Compile Include="User\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\NhanVien_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\NhanVien_GUI.Designer.cs">
+      <DependentUpon>NhanVien_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\PhanQuyen_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\PhanQuyen_GUI.Designer.cs">
+      <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\PhanQuyen_BLL.cs" />
+    <Compile Include="User\PhanQuyen_DAL.cs" />
+    <Compile Include="User\User_BLL.cs" />
+    <Compile Include="User\User_DAL.cs" />
+    <Compile Include="Utils\DataUtils.cs" />
+    <EmbeddedResource Include="HoaDon\HoaDon_GUI.resx">
+      <DependentUpon>HoaDon_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\Khoa_GUI.resx">
+      <DependentUpon>Khoa_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhuNha\KhuNha_GUI.resx">
+      <DependentUpon>KhuNha_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lop\Lop_GUI.resx">
+      <DependentUpon>Lop_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phong\Phong_GUI.resx">
+      <DependentUpon>Phong_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Que\Que_GUI.resx">
+      <DependentUpon>Que_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVien\SinhVien_GUI.resx">
+      <DependentUpon>SinhVien_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThietBi\ThietBi_GUI.resx">
+      <DependentUpon>ThietBi_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThietBi_Phong\ThietBi_Phong_GUI.resx">
+      <DependentUpon>ThietBi_Phong_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiem\TimKiem_GUI.resx">
+      <DependentUpon>TimKiem_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongQuan_GioiThieu\TongQuan_GUI.resx">
+      <DependentUpon>TongQuan_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\NhanVien_GUI.resx">
+      <DependentUpon>NhanVien_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\PhanQuyen_GUI.resx">
+      <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="hình\Thumbs.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hình\Back32.png" />
+    <Content Include="hình\capnhat.png" />
+    <Content Include="hình\Chung16.png" />
+    <Content Include="hình\ChuyenPhong16.png" />
+    <Content Include="hình\DangNhap32.png" />
+    <Content Include="hình\DangXuat32.png" />
+    <Content Include="hình\DanhGia32.png" />
+    <Content Include="hình\DanhMuc32.png" />
+    <Content Include="hình\DiemDanhSinhVien.png" />
+    <Content Include="hình\Doc32.png" />
+    <Content Include="hình\Down16.png" />
+    <Content Include="hình\Down32.png" />
+    <Content Include="hình\Full32.png" />
+    <Content Include="hình\hethong.png" />
+    <Content Include="hình\HeThong32.png" />
+    <Content Include="hình\HienThi32.png" />
+    <Content Include="hình\important.png" />
+    <Content Include="hình\KTX32.png" />
+    <Content Include="hình\Lich32.png" />
+    <Content Include="hình\luu.png" />
+    <Content Include="hình\Luu32.png" />
+    <Content Include="hình\Luu32_1.png" />
+    <Content Include="hình\Main.png" />
+    <Content Include="hình\Menu32.png" />
+    <Content Include="hình\MicrosoftTeams-image %281%29.png" />
+    <Content Include="hình\Next32.png" />
+    <Content Include="hình\Ngang32.png" />
+    <Content Include="hình\NguoiDung.png" />
+    <Content Include="hình\Normal32.png" />
+    <Content Include="hình\password.png" />
+    <Content Include="hình\PhucHoi32.png" />
+    <Content Include="hình\QLDay32.png" />
+    <Content Include="hình\QLPhong32.png" />
+    <Content Include="hình\QLSinhVien32.png" />
+    <Content Include="hình\QLSinhVien321.png" />
+    <Content Include="hình\QuanLy32.png" />
+    <Content Include="hình\SaoLuu16.png" />
+    <Content Include="hình\SaoLuu32.png" />
+    <Content Include="hình\Sua16.png" />
+    <Content Include="hình\Sua161.png" />
+    <Content Include="hình\Sua16_1.png" />
+    <Content Include="hình\Sua32_1.png" />
+    <Content Include="hình\SuaDay32.png" />
+    <Content Include="hình\SuaPhong32.png" />
+    <Content Include="hình\SuaSinhVien32.png" />
+    <Content Include="hình\Tab32.png" />
+    <Content Include="hình\Them16.png" />
+    <Content Include="hình\Them32.png" />
+    <Content Include="hình\Them32_1.png" />
+    <Content Include="hình\ThemDay32.png" />
+    <Content Include="hình\ThemPhong32.png" />
+    <Content Include="hình\ThemSinhVien32.png" />
+    <Content Include="hình\ThemSinhVien321.png" />
+    <Content Include="hình\themsv.png" />
+    <Content Include="hình\Thoat32.png" />
+    <Content Include="hình\ThongKe32.png" />
+    <Content Include="hình\ThongKeDay32.png" />
+    <Content Include="hình\ThongKePhong32.png" />
+    <Content Include="hình\ThongKeSinhVien32.png" />
+    <Content Include="hình\ThongTinDanhGia32png.png" />
+    <Content Include="hình\ThuPhi16.png" />
+    <Content Include="hình\ThuPhi32.png" />
+    <Content Include="hình\TimDay16.png" />
+    <Content Include="hình\TimPhong16.png" />
+    <Content Include="hình\TimPhong161.png" />
+    <Content Include="hình\TimSinhVien16.png" />
+    <Content Include="hình\TonGiao16.png" />
+    <Content Include="hình\TonGiao24.png" />
+    <Content Include="hình\TonGiaoDanToc.png" />
+    <Content Include="hình\TraCuu32.png" />
+    <Content Include="hình\TraCuuDay32.png" />
+    <Content Include="hình\TraCuuPhong32.png" />
+    <Content Include="hình\TraCuuSinhVien32.png" />
+    <Content Include="hình\TroGiup32.png" />
+    <Content Include="hình\TroGiup32_1.png" />
+    <Content Include="hình\x.png" />
+    <Content Include="hình\x1.png" />
+    <Content Include="hình\XepLoai32.png" />
+    <Content Include="hình\Xoa16.png" />
+    <Content Include="hình\Xoa16_1.png" />
+    <Content Include="hình\Xoa32.png" />
+    <Content Include="hình\Xoa32_1.png" />
+    <Content Include="hình\XoaDay32.png" />
+    <Content Include="hình\XoaPhong32.png" />
+    <Content Include="hình\XoaSinhVien32.png" />
+    <Content Include="hình\XoaSinhVien321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

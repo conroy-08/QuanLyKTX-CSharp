@@ -1,0 +1,99 @@
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe.config
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.pdb
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.AssemblyReference.cache
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TrangChu.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Properties.Resources.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.GenerateResource.cache
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInputs.cache
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.exe
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.pdb
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.KhuNha.KhuNha_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi.ThietBi_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Phong.Phong_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi_Phong.ThietBi_Phong_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe.config
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.pdb
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.KhuNha.KhuNha_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Phong.Phong_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi.ThietBi_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi_Phong.ThietBi_Phong_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TrangChu.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Properties.Resources.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.GenerateResource.cache
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.exe
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.pdb
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Lop.Lop_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Que.Que_GUI.resources
+C:\Users\lenovo\Desktop\QuanLyKTX-master\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien.SinhVien_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe.config
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.pdb
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.AssemblyReference.cache
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.KhuNha.KhuNha_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Lop.Lop_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Phong.Phong_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Que.Que_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien.SinhVien_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi.ThietBi_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi_Phong.ThietBi_Phong_GUI.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TrangChu.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Properties.Resources.resources
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.GenerateResource.cache
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInputs.cache
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.exe
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.pdb
+C:\Users\hunq1\Downloads\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Khoa.Khoa_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Khoa.Khoa_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Lop.Lop_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Que.Que_GUI.resources
+C:\Users\hunq1\source\repos\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien.SinhVien_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe.config
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.pdb
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.AssemblyReference.cache
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Khoa.Khoa_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.KhuNha.KhuNha_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Lop.Lop_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Phong.Phong_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Que.Que_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien.SinhVien_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi.ThietBi_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi_Phong.ThietBi_Phong_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TrangChu.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Properties.Resources.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.GenerateResource.cache
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInputs.cache
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.exe
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.pdb
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.User.FormLogin.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.User.NhanVien_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.User.PhanQuyen_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\QuanLyKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TongQuan_GioiThieu.TongQuan_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe.config
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.exe
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\bin\Debug\QuanLyKTX.pdb
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.AssemblyReference.cache
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Khoa.Khoa_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.KhuNha.KhuNha_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Lop.Lop_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Phong.Phong_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Que.Que_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien.SinhVien_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi.ThietBi_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.ThietBi_Phong.ThietBi_Phong_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TongQuan_GioiThieu.TongQuan_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TrangChu.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Properties.Resources.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.User.FormLogin.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.User.NhanVien_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.User.PhanQuyen_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.GenerateResource.cache
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInputs.cache
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.exe
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.pdb
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TimKiem.TimKiem_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\BaiTapLon\QLKTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.HoaDon.HoaDon_GUI.resources
