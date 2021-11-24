@@ -126,7 +126,7 @@ namespace QuanLyKTX.User
                 else
                     if (Regex.IsMatch(txtTenNhanVien.Text, "[0-9-]+"))
                 {
-                    //[^0-9-]+
+                    
                     errorPro.SetError(txtTenNhanVien, "Tên nhân vien không chứa số và ký tự đặc biệt");
                     txtTenNhanVien.BackColor = Color.Pink;
                 }

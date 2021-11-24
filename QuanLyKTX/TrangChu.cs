@@ -13,7 +13,7 @@ namespace QuanLyKTX
     public partial class TrangChu : Form
     {
 
-        TrangChu_BLL trangchu = new TrangChu_BLL();
+        
         public TrangChu()
         {
             InitializeComponent();
@@ -23,49 +23,50 @@ namespace QuanLyKTX
 
         private void quảnLýLớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlLop();
         }
 
 
         private void quảnLýKhuNhàToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlKhuNha();
         }
 
         private void quảnLýThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlThietBi();
         }
 
         private void quảnLýPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlPhong();
         }
 
         private void quảnLýPhòngThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlTbiPhong();
         }
 
         private void quảnLýKhoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlKhoa();
         }
 
         private void quảnLýQuêToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlQue();
         }   
 
         private void quảnLýSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlSinhVien();
         }
 
@@ -111,24 +112,25 @@ namespace QuanLyKTX
 
         private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.PhanQuyen();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.NhanVien();
         }
 
         private void tổngQuanVềKTXToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.TongQuan();
         }
 
         private void toolStripMenuTimKiem_Click(object sender, EventArgs e)
         {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.TimKiem();
 
         }
@@ -143,7 +145,7 @@ namespace QuanLyKTX
 
         private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlHoaDon();
         }
     }

@@ -15,12 +15,19 @@ namespace QuanLyKTX.User
     public partial class FormLogin : Form
     {
 
-        TrangChu trangChu = new TrangChu();
+        private TrangChu trangChu = new TrangChu();
+
         public FormLogin(TrangChu trangChu)
         {
             InitializeComponent();
             this.trangChu = trangChu;
         }
+        public FormLogin()
+        {
+            InitializeComponent();
+           
+        }
+
 
 
         public static string FullName = "";
@@ -82,7 +89,7 @@ namespace QuanLyKTX.User
                     TenTaiKhoan = phanQuyen_BLL.BLL_PhanQuyen_DangNhap_Select(txtUser.Text, utils.EncodePassWord("123", txtPass.Text)).Rows[0][1].ToString();
                     FullName = phanQuyen_BLL.BLL_PhanQuyen_DangNhap_Select(txtUser.Text, utils.EncodePassWord("123", txtPass.Text)).Rows[0][2].ToString();
                     ROLES = phanQuyen_BLL.BLL_PhanQuyen_DangNhap_Select(txtUser.Text, utils.EncodePassWord("123", txtPass.Text)).Rows[0][18].ToString();
-                 /*   if (ROLES.Equals("STAFF") || ROLES.Equals("MANAGER"))
+                    if (ROLES.Equals("STAFF") || ROLES.Equals("MANAGER"))
                     {
                       
                         QLNhanVien = true; 
@@ -94,7 +101,7 @@ namespace QuanLyKTX.User
                         QLNhanVien = false;
                         HoaDon = false;
                         QLDanhMuc = false;
-                    }*/
+                    }
                     //rồi việc còn lại là gọi hàm phân quyền thôi, như đã nói ở trên, nhớ số cột cẩn thận ko sai nhé :v
                     QLKhoa = Phan_Quyen(8);
                     QLLop = Phan_Quyen(9);

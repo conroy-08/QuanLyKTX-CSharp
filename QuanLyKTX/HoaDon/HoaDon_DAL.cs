@@ -35,22 +35,24 @@ namespace QuanLyKTX.HoaDon
         }
 
 
-        public void DAL_insert_HoaDon(string MaPhong , string MaHD , DateTime NgayLapHoaDon , double TienNha ,double TienDien , double TienNc , double TienVs ,
-            double TienPhat, double TongTien , int TrangThai)
+        public void DAL_insert_HoaDon(string MaPhong , string MaHD , DateTime Thang , DateTime Nam , double TienNha ,double TienDien , double TienNc , double TienVs ,
+            double TienPhat, DateTime NgayHetHan,double TongTien , int TrangThai)
         {
-            name = new string[10];
-            value = new object[10];
+            name = new string[12];
+            value = new object[12];
             name[0] = "@MaPhong"; value[0] = MaPhong;
             name[1] = "@MaHD"; value[1] = MaHD;
-            name[2] = "@NgayLapHoaDon"; value[2] = NgayLapHoaDon;
-            name[3] = "@TienNha"; value[3] = TienNha;
-            name[4] = "@TienDien"; value[4] = TienDien;
-            name[5] = "@TienNuoc"; value[5] = TienNc;
-            name[6] = "@TienVeSinh"; value[6] = TienVs;
-            name[7] = "@TienPhat"; value[7] = TienPhat;
-            name[8] = "@TongTien"; value[8] = TongTien;
-            name[9] = "@TrangThai"; value[9] = TrangThai;
-            dataHelper.ExecuteQuery("Phong_Chiphi_Insert", name, value, 10);
+            name[2] = "@Thang"; value[2] = Thang;
+            name[3] = "@Nam"; value[3] = Nam;
+            name[4] = "@TienNha"; value[4] = TienNha;
+            name[5] = "@TienDien"; value[5] = TienDien;
+            name[6] = "@TienNuoc"; value[6] = TienNc;
+            name[7] = "@TienVeSinh"; value[7] = TienVs;
+            name[8] = "@TienPhat"; value[8] = TienPhat;
+            name[9] = "@NgayHetHan"; value[9] = NgayHetHan;
+            name[10] = "@TongTien"; value[10] = TongTien;
+            name[11] = "@TrangThai"; value[11] = TrangThai;
+            dataHelper.ExecuteQuery("Phong_Chiphi_Insert", name, value, 12);
         }
 
         public void DAL_Update_HoaDon(string MaHD ,DateTime NgayDong, double TienDien, double TienNc, double TienVs,

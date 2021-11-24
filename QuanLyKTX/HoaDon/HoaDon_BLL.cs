@@ -18,10 +18,10 @@ namespace QuanLyKTX.HoaDon
             }
             return false;
         }
-        public void BLL_insert_HoaDon(string MaPhong, string MaHD, DateTime NgayLapHoaDon, double TienNha,double TienDien, double TienNc, double TienVs,
-            double TienPhat, double TongTien, int TrangThai)
+        public void BLL_insert_HoaDon(string MaPhong, string MaHD , DateTime Thang, DateTime Nam, double TienNha,double TienDien, double TienNc, double TienVs,
+            double TienPhat, DateTime NgayHetHan, double TongTien, int TrangThai)
         {
-            HoaDon_DAL.DAL_insert_HoaDon(MaPhong, MaHD, NgayLapHoaDon,TienNha, TienDien, TienNc, TienVs, TienPhat, TongTien, TrangThai);
+            HoaDon_DAL.DAL_insert_HoaDon(MaPhong, MaHD, Thang, Nam,TienNha, TienDien, TienNc, TienVs, TienPhat,NgayHetHan, TongTien, TrangThai);
         }
 
         public void BLL_Update_HoaDon(string MaHD ,DateTime NgayDong, double TienDien, double TienNc, double TienVs,

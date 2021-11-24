@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -21,8 +22,19 @@ namespace QuanLyKTX.HoaDon
         Utils.DataUtils dataUtils = new Utils.DataUtils();
         HoaDon_BLL hoaDon_BLL = new HoaDon_BLL();
         string maHD;
-        int trangthai;
-
+        int trangthai = 0;
+        string maPhong;
+        static string pattern = "^[0-9]*.?[0-9]*$";
+        
+        Double tiendien = 0;
+        Double tiennha = 0;
+        Double tiennuoc = 0;
+        Double tienvesinh = 0;
+        Double tienphat = 0;
+        private static int ktErrorTienDien = 0;
+        private static int ktErrorTienNc = 0;
+        private static int ktErrorTienVs = 0;
+        private static int ktErrorTienPhat = 0;
         private void HoaDon_GUI_Load(object sender, EventArgs e)
         {
             lbNgayDong.Visible = false; lbNgayDong.Enabled = false;
@@ -32,35 +44,18 @@ namespace QuanLyKTX.HoaDon
             rdb_DaDong.Visible = false; rdb_DaDong.Enabled = false;
             btn_sua.Enabled = false;
             dtp_NgayLap.Enabled = false;
-
+            btn_Luu.Enabled = false;
             // Đổ dữ liệu ra combobox
-            DataTable dtPhong = phong_BLL.ShowTable();
-            DataTable dtHoaDon = hoaDon_BLL.getAll();
-            dataUtils.FillCombobox(cbMaPhong, dtPhong, "MaPhong", "MaPhong");
-            dataUtils.FillCombobox(cb_MaHD, dtHoaDon, "MaHD", "MaHD");
+           
             cbMaPhong.Text = "";
             cb_MaHD.Text = "";
             dtp_NgayHetHan.Value = dtp_NgayLap.Value.AddDays(+7);
 
         }
 
-        void ResetValue()
-        {
-            txtMHD.Text = "";
-             txtTenKhu.Text = "";
-             txtTenPhong.Text = "";
-             txtThanhTien.Text = "";
-             txtTienDien.Text = txtTienNc.Text = txtTienPhat.Text = txtTienVeSinh.Text = txtTienNha.Text = "";
-             cbMaPhong.Text = "";
-           
-
-        }
 
         private void cbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
-
             try
             {
              
@@ -68,8 +63,12 @@ namespace QuanLyKTX.HoaDon
                     txtTenPhong.Text = dtPhong.Rows[0]["TenPhong"].ToString();
                     txtTenKhu.Text = dtPhong.Rows[0]["TenKhu"].ToString();
                     txtTienNha.Text = dtPhong.Rows[0]["GiaPhong"].ToString();
+                    txtThanhTien.Text = txtTienNha.Text;
                     txtTienDien.Enabled = txtTienNc.Enabled = txtTienPhat.Enabled = txtTienVeSinh.Enabled = true;
                     dtp_NgayLap.Enabled = true;
+                    txtMHD.Text = txtTienDien.Text = txtTienNc.Text = txtTienVeSinh.Text = txtTienPhat.Text = "";
+                btn_Them.Enabled = true;
+                btn_Luu.Enabled = false;
                 
             }
             catch
@@ -78,14 +77,12 @@ namespace QuanLyKTX.HoaDon
             }
         }
 
-
-
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            string maPhong;
+           
             if (cbMaPhong.Text.Trim() == "")
             {
-                MessageBox.Show(" Không thể lập mã hóa đơn !!!. Bởi vì bạn chưa chọn mã phòng !!!!");
+                MessageBox.Show(" Không thể lập mã hóa đơn !. Bởi vì bạn chưa chọn mã phòng !!!!");
                 return;
             }
             else
@@ -94,14 +91,18 @@ namespace QuanLyKTX.HoaDon
                 maHD = "HD" + maPhong +   dtp_NgayLap.Value.Month.ToString() + dtp_NgayLap.Value.Year.ToString();
                 if (hoaDon_BLL.CheckTable(maHD))
                 {
-                    txtMHD.Text = maHD;
-                    MessageBox.Show(maHD + " đã tồn tại !!!.");
-                    txtMHD.Text = "";
+                    btn_Them.Enabled = true;
+                    MessageBox.Show( "Mã hóa đơn đã tồn tại !!!. Vui lòng nhập lập mã hóa đơn khác .");
+                    txtMHD.Text = ""; 
+                    btn_Luu.Enabled = false;
+                    
                 }
                 else
                 {
                     txtMHD.Text = maHD;
+                    btn_Luu.Enabled = true;
                     btn_Them.Enabled = false;
+                    dtp_NgayLap.Enabled = false;
                 }
             }
 
@@ -120,7 +121,7 @@ namespace QuanLyKTX.HoaDon
 
         double TinhTienHoaDon()
         {
-            double thanhtien, tiennha, tiendien, tiennuoc, tienvesinh, tienphat;
+            double thanhtien;
             tiennha = double.Parse(txtTienNha.Text);
             tiendien = checkItem(txtTienDien);
             tiennuoc = checkItem(txtTienNc);
@@ -134,9 +135,10 @@ namespace QuanLyKTX.HoaDon
         {
             double value;
 
-            if (txtItem.Text.Trim() == "" || double.Parse(txtItem.Text) <=0)
+            if (txtItem.Text.Trim() == "" || double.Parse(txtItem.Text) <0 )
             {
                 value = 0;
+                
             }
             else
             {
@@ -147,30 +149,144 @@ namespace QuanLyKTX.HoaDon
 
         private void txtTienDien_TextChanged(object sender, EventArgs e)
         {
-            txtThanhTien.Text = TinhTienHoaDon().ToString();
+            try
+            {
+                if (Regex.IsMatch(txtTienDien.Text, pattern)  )
+                {
+                    errorPro.Clear();
+                    txtTienDien.BackColor = Color.White;
+                    txtThanhTien.Text = TinhTienHoaDon().ToString();
+                    ktErrorTienDien = 1;
+                }
+                else
+                {
+                    errorPro.SetError(this.txtTienDien, "Tiền điện không đúng định dạng ");
+                    txtTienDien.BackColor = Color.Pink;
+
+                }
+            }
+            catch 
+            {
+                errorPro.SetError(this.txtTienDien, "Tiền điện không đúng định dạng ");
+                txtTienDien.BackColor = Color.Pink;
+                ktErrorTienDien = 0;
+            }
         }
 
         private void txtTienNc_TextChanged(object sender, EventArgs e)
         {
-            txtThanhTien.Text = TinhTienHoaDon().ToString();
+            try
+            {
+                if (Regex.IsMatch(txtTienNc.Text, pattern)  )
+                {
+                    errorPro.Clear();
+                    txtTienNc.BackColor = Color.White;
+                    txtThanhTien.Text = TinhTienHoaDon().ToString();
+                    ktErrorTienNc = 1;
+                }
+                else
+                {
+                    errorPro.SetError(this.txtTienNc, "Tiền nước không đúng định dạng ");
+                    txtTienNc.BackColor = Color.Pink;
+
+                }
+            }
+            catch
+            {
+                errorPro.SetError(this.txtTienNc, "Tiền nước không đúng định dạng ");
+                txtTienNc.BackColor = Color.Pink;
+                ktErrorTienNc = 0;
+            }
         }
 
         private void txtTienVeSinh_TextChanged(object sender, EventArgs e)
         {
-            txtThanhTien.Text = TinhTienHoaDon().ToString();
+            try
+            {
+                if (Regex.IsMatch(txtTienVeSinh.Text, pattern) || txtTienVeSinh.Text =="" )
+                {
+                    errorPro.Clear();
+                    txtTienVeSinh.BackColor = Color.White;
+                    txtThanhTien.Text = TinhTienHoaDon().ToString();
+                    ktErrorTienVs = 1;
+                    
+                }
+                else
+                {
+                    errorPro.SetError(this.txtTienVeSinh, "Tiền vệ sinh không đúng định dạng ");
+                    txtTienVeSinh.BackColor = Color.Pink;
+
+                }
+            }
+            catch
+            {
+                errorPro.SetError(this.txtTienVeSinh, "Tiền vệ sinh không đúng định dạng ");
+                txtTienVeSinh.BackColor = Color.Pink;
+                ktErrorTienVs = 0;
+            }
+            
         }
 
         private void txtTienPhat_TextChanged(object sender, EventArgs e)
         {
-            txtThanhTien.Text = TinhTienHoaDon().ToString();
-        }
+            try
+            {
+                if (Regex.IsMatch(txtTienPhat.Text, pattern)  )
+                {
+                    errorPro.Clear();
+                    txtTienPhat.BackColor = Color.White;
+                    txtThanhTien.Text = TinhTienHoaDon().ToString();
+                    ktErrorTienPhat = 1;
+                    
+                }
+                else
+                {
+                    errorPro.SetError(this.txtTienPhat, "Tiền phạt không đúng định dạng ");
+                    txtTienPhat.BackColor = Color.Pink;
 
+                }
+            }
+            catch {
+                errorPro.SetError(this.txtTienPhat, "Tiền phạt không đúng định dạng ");
+                txtTienPhat.BackColor = Color.Pink;
+                ktErrorTienPhat = 0;
+
+            }
+        }
+        private void CallTextChanged(object sender, EventArgs e)
+        {
+            txtTienNc_TextChanged(sender, e);
+            txtTienDien_TextChanged(sender, e);
+            txtTienPhat_TextChanged(sender, e);
+            txtTienVeSinh_TextChanged(sender, e);
+
+        }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
+            CallTextChanged(sender, e);
+            if (hoaDon_BLL.CheckTable(maHD))
+            {
+                
+                MessageBox.Show(maHD + " đã tồn tại !!!.");
+                txtMHD.Text = "";
+                return;
+            }
+            else
+            {
+                txtMHD.Text = maHD;
+            }
             if (cbMaPhong.SelectedIndex == -1)
             {
                 MessageBox.Show("Thiếu thông tin phòng !");
                 return;
+            }
+            if(ktErrorTienDien == 0  || ktErrorTienNc == 0 || ktErrorTienPhat == 0 || ktErrorTienVs == 0)
+            {
+                MessageBox.Show
+                   ("Các ô thông tin nhập vào còn trống, hoặc nhập vào không đúng đinh dạng, "
+                    + "click vào dấu hiệu cảnh báo (dấu chấm than) bên cạnh để biết thêm chi tiết ",
+                    "CẢNH BÁO ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -183,17 +299,11 @@ namespace QuanLyKTX.HoaDon
                 {
                     try
                     {
-                        double tongtien, tiennha, tiendien, tiennuoc, tienvesinh, tienphat;
-                        tiennha = double.Parse(txtTienNha.Text);
-                        tiendien = checkItem(txtTienDien);
-                        tiennuoc = checkItem(txtTienNc);
-                        tienvesinh = checkItem(txtTienVeSinh);
-                        tienphat = checkItem(txtTienPhat);
-                        tongtien = double.Parse(txtThanhTien.Text);
-                        hoaDon_BLL.BLL_insert_HoaDon(cbMaPhong.SelectedValue.ToString(), txtMHD.Text, dtp_NgayLap.Value , tiennha
-                            ,tiendien,tiennuoc,tienvesinh,tienphat,tongtien,0);                       
+                        hoaDon_BLL.BLL_insert_HoaDon(cbMaPhong.SelectedValue.ToString(), txtMHD.Text, dtp_NgayLap.Value, dtp_NgayLap.Value, tiennha
+                            ,tiendien,tiennuoc,tienvesinh,tienphat, dtp_NgayHetHan.Value,double.Parse(txtThanhTien.Text), 0);                       
                         MessageBox.Show("Thêm Hóa Đơn THÀNH CÔNG!!!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         OpenDataGridView(txtMHD.Text);
+                        reset();
                     }
                     catch (Exception ex)
                     {
@@ -201,15 +311,35 @@ namespace QuanLyKTX.HoaDon
                     }
                 }
 
-
             }
 
-
+             
         }
 
         private void dtp_NgayLap_ValueChanged(object sender, EventArgs e)
         {
-            dtp_NgayHetHan.Value = dtp_NgayLap.Value.AddDays(+7);
+            if(dtp_NgayLap.Value > DateTime.Now)
+            {
+                MessageBox.Show("Không được trọn ngày lớn hơn ngày hiện tại " , " CẢNH BÁO ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_NgayLap.Value = DateTime.Now;
+            }
+            else
+            {
+                dtp_NgayHetHan.Value = dtp_NgayLap.Value.AddDays(+7);
+                maPhong = cbMaPhong.Text;
+                maHD = "HD" + maPhong + dtp_NgayLap.Value.Month.ToString() + dtp_NgayLap.Value.Year.ToString();
+                txtMHD.Text = maHD;
+                if (hoaDon_BLL.CheckTable(maHD))
+                {
+                    return;
+                }
+                else
+                {
+                    txtMHD.Text = maHD;
+                }
+            }
+            
+
         }
 
         private void OpenDataGridView(string MaHD)
@@ -217,16 +347,32 @@ namespace QuanLyKTX.HoaDon
             dtGrid_HoaDon.DataSource = hoaDon_BLL.findByMaHD(MaHD);
             dtGrid_HoaDon.Columns[0].HeaderText = "Mã Phòng"; 
             dtGrid_HoaDon.Columns[1].HeaderText = "Mã Hóa Đơn ";
-            dtGrid_HoaDon.Columns[2].HeaderText = "Ngày Lập HĐ  "; 
-            dtGrid_HoaDon.Columns[3].HeaderText = "Tiền Điện  ";
-            dtGrid_HoaDon.Columns[4].HeaderText = "Tiền Nước "; 
-            dtGrid_HoaDon.Columns[5].HeaderText = "Tiền Vệ Sinh ";
-            dtGrid_HoaDon.Columns[6].HeaderText = "Tiền Phạt "; 
-            dtGrid_HoaDon.Columns[7].HeaderText = "Ngày Đóng "; 
-            dtGrid_HoaDon.Columns[8].HeaderText = "Tổng Tiền ";
+            dtGrid_HoaDon.Columns[2].HeaderText = "Ngày Lập HĐ  ";
+            dtGrid_HoaDon.Columns[3].Visible = false;
+            dtGrid_HoaDon.Columns[4].HeaderText = "Tiền Nhà ";
+            dtGrid_HoaDon.Columns[5].HeaderText = "Tiền Điện  ";
+            dtGrid_HoaDon.Columns[6].HeaderText = "Tiền Nước "; 
+            dtGrid_HoaDon.Columns[7].HeaderText = "Tiền Vệ Sinh ";
+            dtGrid_HoaDon.Columns[8].HeaderText = "Tiền Phạt ";
             dtGrid_HoaDon.Columns[9].Visible = false;
-            dtGrid_HoaDon.Columns[10].HeaderText = "Tiền Nhà ";
+            dtGrid_HoaDon.Columns[10].HeaderText = "Ngày Đóng "; 
+            dtGrid_HoaDon.Columns[11].HeaderText = "Tổng Tiền ";
+            dtGrid_HoaDon.Columns[12].Visible = false;
             dtGrid_HoaDon.AllowUserToAddRows = false;
+        }
+
+        private void cb_MaHD_Click(object sender, EventArgs e)
+        {
+            DataTable dtHoaDon = hoaDon_BLL.getAll();
+            dataUtils.FillCombobox(cb_MaHD, dtHoaDon, "MaHD", "MaHD");
+        }
+
+        private void cbMaPhong_Click(object sender, EventArgs e)
+        {
+            DataTable dtPhong = phong_BLL.ShowTable();
+
+            dataUtils.FillCombobox(cbMaPhong, dtPhong, "MaPhong", "MaPhong");
+
         }
 
         private void dtGrid_HoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -244,16 +390,17 @@ namespace QuanLyKTX.HoaDon
                 btn_Them.Enabled = false;
                 dtp_NgayLap.Enabled = false;
                 cbMaPhong.Enabled = false;
-                btn_Reset.Enabled = false;
+               
                 txtMHD.Text = dtGrid_HoaDon.CurrentRow.Cells[1].Value.ToString();
                 dtp_NgayLap.Value = DateTime.Parse(dtGrid_HoaDon.CurrentRow.Cells[2].Value.ToString());
                 dtp_NgayHetHan.Value = dtp_NgayLap.Value.AddDays(+7);
-                txtTienDien.Text = dtGrid_HoaDon.CurrentRow.Cells[3].Value.ToString(); ;
-                txtTienNc.Text = dtGrid_HoaDon.CurrentRow.Cells[4].Value.ToString();
-                txtTienVeSinh.Text = dtGrid_HoaDon.CurrentRow.Cells[5].Value.ToString();
-                txtTienPhat.Text = dtGrid_HoaDon.CurrentRow.Cells[6].Value.ToString();
-                txtThanhTien.Text = dtGrid_HoaDon.CurrentRow.Cells[8].Value.ToString();
-                txtTongTien.Text = dtGrid_HoaDon.CurrentRow.Cells[8].Value.ToString();
+                txtTienDien.Text = dtGrid_HoaDon.CurrentRow.Cells[5].Value.ToString(); ;
+                txtTienNc.Text = dtGrid_HoaDon.CurrentRow.Cells[6].Value.ToString();
+                txtTienVeSinh.Text = dtGrid_HoaDon.CurrentRow.Cells[7].Value.ToString();
+                txtTienPhat.Text = dtGrid_HoaDon.CurrentRow.Cells[8].Value.ToString();
+                txtThanhTien.Text = dtGrid_HoaDon.CurrentRow.Cells[11].Value.ToString();
+
+                txtTongTien.Text = dtGrid_HoaDon.CurrentRow.Cells[11].Value.ToString();
                 lblBangchu.Text = "Bằng chữ : "+ hoaDon_BLL.convertNumberToText(double.Parse(txtTongTien.Text));
                 lblBangchu. ForeColor = Color.Red;
 
@@ -262,7 +409,7 @@ namespace QuanLyKTX.HoaDon
                 dtp_NgayDong.Enabled = true; dtp_NgayDong.Visible = true;
                 rdb_ChuaDong.Visible = true; rdb_ChuaDong.Enabled = true;
                 rdb_DaDong.Visible = true; rdb_DaDong.Enabled = true;
-                if (dtGrid_HoaDon.CurrentRow.Cells[9].Value.ToString() == "True")
+                if (dtGrid_HoaDon.CurrentRow.Cells[12].Value.ToString() == "True")
                 {
                     rdb_DaDong.Checked = true;
                 }
@@ -276,7 +423,7 @@ namespace QuanLyKTX.HoaDon
         
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            
+            CallTextChanged(sender, e);
             DialogResult dialogResult = MessageBox.Show("BẠN CÓ THẬT SỰ MUỐN CẬP NHẬT?", " CẢNH BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
@@ -290,45 +437,91 @@ namespace QuanLyKTX.HoaDon
                         {
                             trangthai = 0;
                         }
-                        double tongtien,  tiendien, tiennuoc, tienvesinh, tienphat;
-                        tiendien = checkItem(txtTienDien);
-                        tiennuoc = checkItem(txtTienNc);
-                        tienvesinh = checkItem(txtTienVeSinh);
-                        tienphat = checkItem(txtTienPhat);
-                        tongtien = double.Parse(txtThanhTien.Text);
-                         hoaDon_BLL.BLL_Update_HoaDon(txtMHD.Text, dtp_NgayDong.Value, tiendien, tiennuoc, tienvesinh, tienphat, tongtien, trangthai);
+                        
+                         hoaDon_BLL.BLL_Update_HoaDon(txtMHD.Text, dtp_NgayDong.Value, tiendien, tiennuoc, tienvesinh, 
+                             tienphat, double.Parse(txtThanhTien.Text), trangthai);
                         MessageBox.Show("Cập nhật THÀNH CÔNG!!! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    OpenDataGridView(txtMHD.Text);
-                }   
-                    catch (Exception ex)
-                    {
+                         OpenDataGridView(txtMHD.Text);
+                    return;
+                    }   
+                    catch (Exception ex){
                         MessageBox.Show("Cập nhật THẤT BẠI do: " + ex, " CẢNH BÁO ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                     }
             }
-           
-            
+            else return;
+
+
         }
 
         private void btn_Reset_Click(object sender, EventArgs e)
         {
+                dtGrid_HoaDon.DataSource = null;
+
+                txtMHD.Text = "";
+                txtTongTien.Text = "";
+                txtTenKhu.Text = txtTenPhong.Text = txtTienNha.Text = txtThanhTien.Text = "";
+                txtTienPhat.Text = txtTienDien.Text = txtTienVeSinh.Text = txtTienNc.Text = "";
+                txtTienDien.Enabled = txtTienNc.Enabled = txtTienPhat.Enabled = txtTienVeSinh.Enabled = false;
+
+                lbNgayDong.Visible = false; lbNgayDong.Enabled = false;
+                lbTrangThai.Visible = false; lbTrangThai.Enabled = false;
+                lblBangchu.Text = "";
+
+                dtp_NgayDong.Enabled = false; dtp_NgayDong.Visible = false;
+                dtp_NgayLap.Enabled = false;
+
+                rdb_ChuaDong.Visible = false; rdb_ChuaDong.Enabled = false;
+                rdb_DaDong.Visible = false; rdb_DaDong.Enabled = false;
+
+                btn_sua.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Them.Enabled = true;
+                
+                cbMaPhong.Enabled = true;
+                cbMaPhong.Text = "";
+                cb_MaHD.Text = "";
+
+                txtMHD.Text = "";
+                txtTongTien.Text = "";
+                               
+                errorPro.Clear();
+                txtTienNc.BackColor = Color.White;
+                txtTienDien.BackColor = Color.White;
+                txtTienPhat.BackColor = Color.White;
+                txtTienVeSinh.BackColor = Color.White;
+               
+            
+
+        }
+
+        private void reset()
+        {
+            txtMHD.Text = "";
+            txtTongTien.Text = "";
+            txtTenKhu.Text = txtTenPhong.Text = txtTienNha.Text = txtThanhTien.Text = "";
+            txtTienPhat.Text = txtTienDien.Text = txtTienVeSinh.Text = txtTienNc.Text = "";
             txtTienDien.Enabled = txtTienNc.Enabled = txtTienPhat.Enabled = txtTienVeSinh.Enabled = false;
-            btn_Luu.Enabled = true; btn_Luu.Visible = true;
+
             lbNgayDong.Visible = false; lbNgayDong.Enabled = false;
             lbTrangThai.Visible = false; lbTrangThai.Enabled = false;
+            lblBangchu.Text = "";
+
+            cbMaPhong.Enabled = true;
+            cbMaPhong.Text = "";
+            cb_MaHD.Text = "";
+
             dtp_NgayDong.Enabled = false; dtp_NgayDong.Visible = false;
+            dtp_NgayLap.Enabled = false;
+
             rdb_ChuaDong.Visible = false; rdb_ChuaDong.Enabled = false;
             rdb_DaDong.Visible = false; rdb_DaDong.Enabled = false;
-            dtp_NgayLap.Enabled = true;
-            cbMaPhong.Enabled = true;
-            lbNgayDong.Visible = false; lbNgayDong.Enabled = false;
-            lbTrangThai.Visible = false; lbTrangThai.Enabled = false;
-            btn_Them.Enabled = true;
-            dtp_NgayLap.Enabled = false;
-            btn_sua.Enabled = false;
-            cbMaPhong.Text = "";
-            txtTenKhu.Text = txtTenPhong.Text = txtTienNha.Text = txtThanhTien.Text = "";
-            txtTienDien.Text = txtTienNc.Text = txtTienPhat.Text = txtTienVeSinh.Text = "";
+            errorPro.Clear();
+            txtTienNc.BackColor = Color.White;
+            txtTienDien.BackColor = Color.White;
+            txtTienPhat.BackColor = Color.White;
+            txtTienVeSinh.BackColor = Color.White;
         }
+
 
         private void btn_inHd_Click(object sender, EventArgs e)
         {
@@ -419,10 +612,15 @@ namespace QuanLyKTX.HoaDon
                 }
                 exApp.Quit();//Thoát khỏi ứng dụng
             }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để in. " , " CẢNH BÁO ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
+           
             DataTable dateSearch = new DataTable();
             if(cb_MaHD.Text.Trim() == "")
             {
@@ -430,9 +628,11 @@ namespace QuanLyKTX.HoaDon
             }
             else
             {
+               
                 dateSearch = hoaDon_BLL.findByMaHD(cb_MaHD.Text);
                 if (dateSearch.Rows.Count > 0)
-                {      
+                {
+                    reset();
                     OpenDataGridView(cb_MaHD.Text);
                 }
                 else

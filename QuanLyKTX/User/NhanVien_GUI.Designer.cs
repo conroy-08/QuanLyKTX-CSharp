@@ -206,6 +206,7 @@ namespace QuanLyKTX.User
             // 
             // dtNgaySinh
             // 
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgaySinh.Location = new System.Drawing.Point(177, 196);
             this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtNgaySinh.Name = "dtNgaySinh";

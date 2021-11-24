@@ -8,23 +8,25 @@ namespace QuanLyKTX
 {
     static class Program
     {
+      
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        
-        [STAThread]      
+        [STAThread]
         static void Main()
         {
             try
             {
                 Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
+                Application.SetCompatibleTextRenderingDefault(false);   
                 Application.Run(new TrangChu());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+
             }
         }
+        
     }
 }

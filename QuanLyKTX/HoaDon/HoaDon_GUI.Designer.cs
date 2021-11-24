@@ -29,6 +29,7 @@ namespace QuanLyKTX.HoaDon
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTienVeSinh = new System.Windows.Forms.TextBox();
@@ -63,8 +64,8 @@ namespace QuanLyKTX.HoaDon
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtGrid_HoaDon = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblBangchu = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.lblBangchu = new System.Windows.Forms.Label();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_inHd = new System.Windows.Forms.Button();
@@ -72,14 +73,16 @@ namespace QuanLyKTX.HoaDon
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cb_MaHD = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cb_MaHD = new System.Windows.Forms.ComboBox();
             this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
+            this.errorPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid_HoaDon)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorPro)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,7 +146,7 @@ namespace QuanLyKTX.HoaDon
             // rdb_ChuaDong
             // 
             this.rdb_ChuaDong.AutoSize = true;
-            this.rdb_ChuaDong.Location = new System.Drawing.Point(806, 264);
+            this.rdb_ChuaDong.Location = new System.Drawing.Point(818, 264);
             this.rdb_ChuaDong.Name = "rdb_ChuaDong";
             this.rdb_ChuaDong.Size = new System.Drawing.Size(134, 21);
             this.rdb_ChuaDong.TabIndex = 33;
@@ -154,7 +157,7 @@ namespace QuanLyKTX.HoaDon
             // rdb_DaDong
             // 
             this.rdb_DaDong.AutoSize = true;
-            this.rdb_DaDong.Location = new System.Drawing.Point(681, 264);
+            this.rdb_DaDong.Location = new System.Drawing.Point(693, 264);
             this.rdb_DaDong.Name = "rdb_DaDong";
             this.rdb_DaDong.Size = new System.Drawing.Size(119, 21);
             this.rdb_DaDong.TabIndex = 32;
@@ -239,6 +242,7 @@ namespace QuanLyKTX.HoaDon
             this.cbMaPhong.Size = new System.Drawing.Size(238, 24);
             this.cbMaPhong.TabIndex = 1;
             this.cbMaPhong.SelectedIndexChanged += new System.EventHandler(this.cbMaPhong_SelectedIndexChanged);
+            this.cbMaPhong.Click += new System.EventHandler(this.cbMaPhong_Click);
             // 
             // txtTienPhat
             // 
@@ -385,9 +389,9 @@ namespace QuanLyKTX.HoaDon
             this.label4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(549, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 17);
+            this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Tiền nhà :";
+            this.label4.Text = "Tiền phòng :";
             // 
             // label3
             // 
@@ -430,7 +434,7 @@ namespace QuanLyKTX.HoaDon
             this.dtGrid_HoaDon.Name = "dtGrid_HoaDon";
             this.dtGrid_HoaDon.RowHeadersWidth = 51;
             this.dtGrid_HoaDon.RowTemplate.Height = 24;
-            this.dtGrid_HoaDon.Size = new System.Drawing.Size(966, 134);
+            this.dtGrid_HoaDon.Size = new System.Drawing.Size(966, 125);
             this.dtGrid_HoaDon.TabIndex = 0;
             this.dtGrid_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrid_HoaDon_CellClick);
             // 
@@ -438,27 +442,31 @@ namespace QuanLyKTX.HoaDon
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 169);
+            this.label5.Location = new System.Drawing.Point(9, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Tổng tiền :";
             // 
+            // txtTongTien
+            // 
+            this.txtTongTien.BackColor = System.Drawing.Color.White;
+            this.txtTongTien.Enabled = false;
+            this.txtTongTien.ForeColor = System.Drawing.Color.Black;
+            this.txtTongTien.Location = new System.Drawing.Point(102, 160);
+            this.txtTongTien.Multiline = true;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(198, 30);
+            this.txtTongTien.TabIndex = 5;
+            // 
             // lblBangchu
             // 
             this.lblBangchu.AutoSize = true;
-            this.lblBangchu.Location = new System.Drawing.Point(319, 172);
+            this.lblBangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblBangchu.Location = new System.Drawing.Point(331, 162);
             this.lblBangchu.Name = "lblBangchu";
-            this.lblBangchu.Size = new System.Drawing.Size(0, 17);
+            this.lblBangchu.Size = new System.Drawing.Size(0, 18);
             this.lblBangchu.TabIndex = 4;
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Enabled = false;
-            this.txtTongTien.Location = new System.Drawing.Point(100, 166);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(198, 23);
-            this.txtTongTien.TabIndex = 5;
             // 
             // btn_Them
             // 
@@ -467,7 +475,7 @@ namespace QuanLyKTX.HoaDon
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Them.Location = new System.Drawing.Point(10, 30);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(149, 45);
+            this.btn_Them.Size = new System.Drawing.Size(162, 45);
             this.btn_Them.TabIndex = 0;
             this.btn_Them.Text = "Thêm hóa đơn";
             this.btn_Them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -563,13 +571,19 @@ namespace QuanLyKTX.HoaDon
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thao tác";
             // 
-            // cb_MaHD
+            // btn_TimKiem
             // 
-            this.cb_MaHD.FormattingEnabled = true;
-            this.cb_MaHD.Location = new System.Drawing.Point(136, 105);
-            this.cb_MaHD.Name = "cb_MaHD";
-            this.cb_MaHD.Size = new System.Drawing.Size(195, 24);
-            this.cb_MaHD.TabIndex = 20;
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
+            this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TimKiem.Location = new System.Drawing.Point(365, 94);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(138, 45);
+            this.btn_TimKiem.TabIndex = 22;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // label16
             // 
@@ -581,19 +595,18 @@ namespace QuanLyKTX.HoaDon
             this.label16.TabIndex = 21;
             this.label16.Text = "Mã hóa đơn :";
             // 
-            // btn_TimKiem
+            // cb_MaHD
             // 
-            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
-            this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TimKiem.Location = new System.Drawing.Point(365, 84);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(138, 45);
-            this.btn_TimKiem.TabIndex = 22;
-            this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            this.cb_MaHD.FormattingEnabled = true;
+            this.cb_MaHD.Location = new System.Drawing.Point(136, 105);
+            this.cb_MaHD.Name = "cb_MaHD";
+            this.cb_MaHD.Size = new System.Drawing.Size(195, 24);
+            this.cb_MaHD.TabIndex = 20;
+            this.cb_MaHD.Click += new System.EventHandler(this.cb_MaHD_Click);
+            // 
+            // errorPro
+            // 
+            this.errorPro.ContainerControl = this;
             // 
             // HoaDon_GUI
             // 
@@ -618,6 +631,7 @@ namespace QuanLyKTX.HoaDon
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid_HoaDon)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorPro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,5 +686,6 @@ namespace QuanLyKTX.HoaDon
         private System.Windows.Forms.ComboBox cb_MaHD;
         private System.Windows.Forms.Button btn_TimKiem;
         private System.Windows.Forms.SaveFileDialog dlgSaveFile;
+        private System.Windows.Forms.ErrorProvider errorPro;
     }
 }

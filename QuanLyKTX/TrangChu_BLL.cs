@@ -20,13 +20,9 @@ namespace QuanLyKTX
         User.PhanQuyen_GUI phanQuyen = new User.PhanQuyen_GUI();
         TongQuan_GioiThieu.TongQuan_GUI tongquan = new TongQuan_GioiThieu.TongQuan_GUI();
         TrangChu trangChu = new TrangChu();
-        TimKiem.TimKiem_GUI TimKiem_GUI = new TimKiem.TimKiem_GUI();
         HoaDon.HoaDon_GUI HoaDon_GUI = new HoaDon.HoaDon_GUI();
+        TimKiem.TimKiem_GUI TimKiem_GUI = new TimKiem.TimKiem_GUI();
         
-        public void qlHoaDon()
-        {
-            HoaDon_GUI.Show();
-        }
 
         public void qlPhong()
         {
@@ -73,16 +69,20 @@ namespace QuanLyKTX
 
         public void PhanQuyen()
         {
-            phanQuyen.ShowDialog();
+            phanQuyen.Show();
         }
         public void NhanVien()
         {
-            nhanVien.ShowDialog();
+            nhanVien.Show();
         }
 
         public void TongQuan()
         {
-            tongquan.ShowDialog();
+            tongquan.Show();
+        }
+        public void qlHoaDon()
+        {
+            HoaDon_GUI.Show();
         }
     }
 }
