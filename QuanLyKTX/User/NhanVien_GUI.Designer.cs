@@ -364,7 +364,7 @@ namespace QuanLyKTX.User
             this.dtGridNV.Name = "dtGridNV";
             this.dtGridNV.RowHeadersWidth = 51;
             this.dtGridNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGridNV.Size = new System.Drawing.Size(1299, 339);
+            this.dtGridNV.Size = new System.Drawing.Size(1299, 268);
             this.dtGridNV.TabIndex = 9;
             this.dtGridNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridNV1_CellClick);
             // 
@@ -372,7 +372,7 @@ namespace QuanLyKTX.User
             // 
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 636);
+            this.panel1.Location = new System.Drawing.Point(0, 565);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1299, 58);
@@ -456,7 +456,7 @@ namespace QuanLyKTX.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 694);
+            this.ClientSize = new System.Drawing.Size(1299, 623);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtGridNV);
             this.Controls.Add(this.groupBox1);

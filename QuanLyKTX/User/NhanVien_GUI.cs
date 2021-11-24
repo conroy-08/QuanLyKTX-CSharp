@@ -41,7 +41,8 @@ namespace QuanLyKTX.User
 
         private void NhanVien_GUI_Load(object sender, EventArgs e)
         {
-          
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             OpenDataGridView();
             addItemComboBox();
         }
@@ -485,6 +486,8 @@ namespace QuanLyKTX.User
 
         private void dtGridNV1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
             UserId = int.Parse(dtGridNV.Rows[e.RowIndex].Cells[0].Value.ToString());
             oldTenTaiKhoan =  txtTenTaiKhoan.Text = dtGridNV.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtTenNhanVien.Text = dtGridNV.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -492,6 +495,17 @@ namespace QuanLyKTX.User
             txtDiaChi.Text = dtGridNV.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtSDT.Text = dtGridNV.Rows[e.RowIndex].Cells[6].Value.ToString();
             oldEmail = txtEmail.Text = dtGridNV.Rows[e.RowIndex].Cells[7].Value.ToString();
+            if(txtMatKhau.Text=="" || txtXacNhanMatKhau.Text == "" || txtDiaChi.Text==""|| txtEmail.Text=="" || txtSDT.Text =="")
+            {
+                errorPro.Clear();
+                txtXacNhanMatKhau.BackColor = Color.White;
+                txtMatKhau.BackColor = Color.White;
+                txtDiaChi.BackColor = Color.White;
+                txtEmail.BackColor = Color.White;
+                txtSDT.BackColor = Color.White;
+            }
+
+
             cbChucVu.Text = dtGridNV.Rows[e.RowIndex].Cells[18].Value.ToString();
 
             if (dtGridNV.Rows[e.RowIndex].Cells[20].Value.ToString() != "")
