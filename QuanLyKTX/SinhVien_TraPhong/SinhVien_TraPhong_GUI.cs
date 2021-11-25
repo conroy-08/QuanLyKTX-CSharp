@@ -18,13 +18,29 @@ namespace QuanLyKTX.SinhVien_TraPhong
             InitializeComponent();
         }
         
-
+        void ResetHopDongThue()
+        {
+            txt_MaSoThue.Text = "";
+            txt_MaSV.Text = "";
+            txt_TenSV.Text = "";
+            txt_Khoa.Text = "";
+            txt_Lop.Text = "";
+            txt_MaPhong.Text = "";
+            txt_TenPhong.Text = "";
+            txt_KhuNha.Text = "";
+            txt_GiaPhong.Text = "";
+            txt_NgayBatDau.Text = "";
+            txt_NgayKetThuc.Text = "";
+            txt_GhiChu.Text = "";
+            txt_TrangThai.Text = "";
+        }
         void EditTable()
         {
             getMaSoThue();
             dgv_TraPhong.Columns[0].HeaderText = "Mã Số Thuê";
             dgv_TraPhong.Columns[1].HeaderText = "Ngày Trả";
             dgv_TraPhong.Columns[2].HeaderText = "Tiền Vi Phạm";
+
             dgv_TraPhong.BackgroundColor = Color.Gray;
             dgv_TraPhong.Columns[0].Width = 250;
             dgv_TraPhong.Columns[1].Width = 250;
@@ -76,28 +92,32 @@ namespace QuanLyKTX.SinhVien_TraPhong
 
         private void dgv_KhuNha_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                cbo_MaSoThue.Enabled = false;
-                btn_Luu.Hide();
-                btn_Sua.Show();
-                btn_Sua.Enabled = true;
-                btn_Xoa.Show();
-                btn_Xoa.Enabled = true;
-                btn_Them.Enabled = false;
-                cbo_MaSoThue.Text = "";
-                cbo_MaSoThue.SelectedText = dgv_TraPhong.CurrentRow.Cells[0].Value.ToString();
-                txt_TienViPham.Text = double.Parse(dgv_TraPhong.CurrentRow.Cells[2].Value.ToString()).ToString();
-                if (dgv_TraPhong.CurrentRow.Cells[1].Value.ToString() != "")
+            if (dgv_TraPhong.CurrentRow.Cells[0].Value.ToString() != "")
+                try
                 {
-                    dtp_NgayTra.Value = DateTime.Parse(dgv_TraPhong.CurrentRow.Cells[1].Value.ToString());
+                    cbo_MaSoThue.Enabled = false;
+                    btn_Luu.Hide();
+                    btn_Sua.Show();
+                    btn_Sua.Enabled = true;
+                    btn_Xoa.Show();
+                    btn_Xoa.Enabled = true;
+                    btn_Them.Enabled = false;
+                    cbo_MaSoThue.Text = "";
+                    cbo_MaSoThue.SelectedText = dgv_TraPhong.CurrentRow.Cells[0].Value.ToString();
+                    HopDongChange(dgv_TraPhong.CurrentRow.Cells[0].Value.ToString());
+                    txt_TienViPham.Text = double.Parse(dgv_TraPhong.CurrentRow.Cells[2].Value.ToString()).ToString();
+                    if (dgv_TraPhong.CurrentRow.Cells[1].Value.ToString() != "")
+                    {
+                        dtp_NgayTra.Value = DateTime.Parse(dgv_TraPhong.CurrentRow.Cells[1].Value.ToString());
+                    }
                 }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+        
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -137,6 +157,7 @@ namespace QuanLyKTX.SinhVien_TraPhong
             dtp_NgayTra.Value = new DateTime(2021, 12, 31, 0, 0, 0);
             cbo_MaSoThue.Focus();
             cbo_MaSoThue.Enabled = true;
+            ResetHopDongThue();
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -213,8 +234,6 @@ namespace QuanLyKTX.SinhVien_TraPhong
         {
             while (!User.FormLogin.Checked)
             {
-                User.FormLogin formLogin = new User.FormLogin();
-                formLogin.ShowDialog();
                 this.Close();
             }
 
@@ -226,11 +245,42 @@ namespace QuanLyKTX.SinhVien_TraPhong
                 cbo_MaSoThue.Focus();
                 ShowTable();
                 EditTable();
+                ResetHopDongThue();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo");
             }
+        }
+
+    
+
+        private void cbo_MaSoThue_SelectedValueChanged(object sender, EventArgs e)
+        {
+            HopDongChange(cbo_MaSoThue.Text);
+        }
+
+        void HopDongChange(string MST)
+        {
+            DataTable info = TraPhong.InfoHopDong(MST);
+
+            if (info.Rows.Count > 0)
+            {
+                txt_MaSoThue.Text = info.Rows[0]["MaSoThue"].ToString();
+                txt_MaSV.Text = info.Rows[0]["MaSinhVien"].ToString();
+                txt_TenSV.Text = info.Rows[0]["TenSinhVien"].ToString();
+                txt_Lop.Text = info.Rows[0]["TenLop"].ToString();
+                txt_Khoa.Text = info.Rows[0]["TenKhoa"].ToString();
+                txt_MaPhong.Text = info.Rows[0]["MaPhong"].ToString();
+                txt_TenPhong.Text = info.Rows[0]["TenPhong"].ToString();
+                txt_KhuNha.Text = info.Rows[0]["TenKhu"].ToString();
+                txt_GiaPhong.Text = info.Rows[0]["GiaPhong"].ToString();
+                txt_NgayBatDau.Text = info.Rows[0]["NgayBatDau"].ToString();
+                txt_NgayKetThuc.Text = info.Rows[0]["NgayKetThuc"].ToString();
+                txt_GhiChu.Text = info.Rows[0]["GhiChu"].ToString();
+                txt_TrangThai.Text = info.Rows[0]["TrangThaiThuePhong"].ToString();
+            }
+           
         }
     }
 }

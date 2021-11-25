@@ -62,9 +62,9 @@ namespace QuanLyKTX.User
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnInDS = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.errorPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
@@ -450,10 +450,6 @@ namespace QuanLyKTX.User
             this.btnInDS.UseVisualStyleBackColor = true;
             this.btnInDS.Click += new System.EventHandler(this.btnInDS_Click);
             // 
-            // errorPro
-            // 
-            this.errorPro.ContainerControl = this;
-            // 
             // btnReset
             // 
             this.btnReset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong16;
@@ -467,6 +463,10 @@ namespace QuanLyKTX.User
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // errorPro
+            // 
+            this.errorPro.ContainerControl = this;
             // 
             // NhanVien_GUI
             // 

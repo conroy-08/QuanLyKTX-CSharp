@@ -19,7 +19,7 @@ namespace QuanLyKTX
             InitializeComponent();
         }
 
-       
+        DataHelper helper = new DataHelper();
 
 
         private void quảnLýLớpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +109,13 @@ namespace QuanLyKTX
             {
                 toolStripLabel1.Text = User.FormLogin.FullName + " đang sử dụng phần mềm";
             }
+            CheckTTTP();
+        }
+        
+        public DataTable CheckTTTP()
+        {
+            string sql = "exec sp_TrangChu_CheckTTTP";
+            return helper.getTable(sql);
         }
 
         private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)

@@ -70,6 +70,14 @@ namespace QuanLyKTX.SinhVien_TraPhong
             string sql = "exec sp_SVTraPhong_getThoiGianThue N'" + MST + "'";
             return helper.getTable(sql);
         }
-        
+
+
+        public DataTable getThongTinHopDong(string MST)
+        {
+            string sql = "exec sp_SVTraPhong_ThongTinHopDong N'" + MST + "'";
+            return helper.getTable(sql);
+        }
+
+
     }
 }

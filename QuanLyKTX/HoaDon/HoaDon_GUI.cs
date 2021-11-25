@@ -643,7 +643,8 @@ namespace QuanLyKTX.HoaDon
                 {
                    
                     OpenDataGridView(cb_MaHD.Text);
-                    reset();
+                    resetSearch();
+
                 }
                 else
                 {
@@ -664,6 +665,31 @@ namespace QuanLyKTX.HoaDon
             int mm = int.Parse(cbThang.Text);
             int yyyy = int.Parse(cmbNam.Text);
             dtp_NgayHetHan.Value = new DateTime(yyyy, mm, 10);
+        }
+
+        void resetSearch()
+        {
+            cb_MaHD.Text = cb_MaHD.Text;
+            txtMHD.Text = "";
+            txtTongTien.Text = "";
+            txtTenKhu.Text = txtTenPhong.Text = txtTienNha.Text = txtThanhTien.Text = "";
+            txtTienPhat.Text = txtTienDien.Text = txtTienVeSinh.Text = txtTienNc.Text = "";
+            txtTienDien.Enabled = txtTienNc.Enabled = txtTienPhat.Enabled = txtTienVeSinh.Enabled = false;
+
+            lbNgayDong.Visible = false; lbNgayDong.Enabled = false;
+            lbTrangThai.Visible = false; lbTrangThai.Enabled = false;
+            lblBangchu.Text = "";
+
+            cbMaPhong.Enabled = true;
+            cbMaPhong.Text = "";
+            dtp_NgayDong.Enabled = false; dtp_NgayDong.Visible = false;
+            rdb_ChuaDong.Visible = false; rdb_ChuaDong.Enabled = false;
+            rdb_DaDong.Visible = false; rdb_DaDong.Enabled = false;
+            errorPro.Clear();
+            txtTienNc.BackColor = Color.White;
+            txtTienDien.BackColor = Color.White;
+            txtTienPhat.BackColor = Color.White;
+            txtTienVeSinh.BackColor = Color.White;
         }
 
     }

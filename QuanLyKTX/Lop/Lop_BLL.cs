@@ -53,7 +53,14 @@ namespace QuanLyKTX.Lop
 
         public void Delete(string MaLop)
         {
-            lop.Delete(MaLop);
+            try
+            {
+                lop.Delete(MaLop);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Bản ghi này liên quan đến nhiều dữ liệu khác.. Hãy chắc chắn là đã xóa hết dữ liệu liên quan từ các bảng khác!!");
+            }
         }
 
         public DataTable Search(string str)

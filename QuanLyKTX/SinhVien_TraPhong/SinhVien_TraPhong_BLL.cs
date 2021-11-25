@@ -140,5 +140,10 @@ namespace QuanLyKTX.SinhVien_TraPhong
         {
             return TraPhong.getMaSoThue2(MST);
         }
+
+        public DataTable InfoHopDong(string MST)
+        {
+            return TraPhong.getThongTinHopDong(MST);
+        }
     }
 }

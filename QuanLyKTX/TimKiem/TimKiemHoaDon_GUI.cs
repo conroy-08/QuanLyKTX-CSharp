@@ -48,8 +48,9 @@ namespace QuanLyKTX.TimKiem
                     cmbMaHD.Enabled = true;
                     MaPhong = cmbMaPhong.Text;
                     btnTimKiem.Enabled = true;
+                    cmbMaHD.Text = "";
                 }
-               
+                
                 
             }
             catch
@@ -62,13 +63,20 @@ namespace QuanLyKTX.TimKiem
         {
             DataTable dtPhong = phong_BLL.ShowTable();
             dataUtils.FillCombobox(cmbMaPhong, dtPhong, "MaPhong", "MaPhong");
-
+            dtp_NgayDong.Enabled = false; dtp_NgayDong.Visible = false;
+            txtTongTien.Enabled = false; txtTongTien.Visible = false;
+            lblTongTien.Enabled = false; lblTongTien.Visible = false;
+            lblNgayDong.Enabled = false; lblNgayDong.Visible = false;
         }
 
         private void cmbMaHD_Click(object sender, EventArgs e)
         {
             DataTable dtHoaDon = hoaDon_BLL.findByMaPhongAndMaHD(MaPhong ,"");
             dataUtils.FillCombobox(cmbMaHD, dtHoaDon, "MaHD", "MaHD");
+            dtp_NgayDong.Enabled = false; dtp_NgayDong.Visible = false;
+            txtTongTien.Enabled = false; txtTongTien.Visible = false;
+            lblTongTien.Enabled = false; lblTongTien.Visible = false;
+            lblNgayDong.Enabled = false; lblNgayDong.Visible = false;
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

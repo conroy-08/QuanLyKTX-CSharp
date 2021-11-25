@@ -101,13 +101,30 @@ namespace QuanLyKTX.User
 
         private void addItemComboBox()
         {
-            if (User.FormLogin.ROLES.Equals("MANAGER"))
+            try
             {
-                cbChucVu.Items.Add("MANAGER");
-                cbChucVu.Items.Add("STAFF");
-            }else if (User.FormLogin.ROLES.Equals("STAFF"))
+                if (User.FormLogin.ROLES.Equals("MANAGER"))
+                {
+                    cbChucVu.Items.Add("MANAGER");
+                    cbChucVu.Items.Add("STAFF");
+                    for (int i = 2; i <= cbChucVu.Items.Count; i++)
+                    {
+                        cbChucVu.Items.RemoveAt(i);
+                    }
+                }
+                else if (User.FormLogin.ROLES.Equals("STAFF"))
+                {
+                    cbChucVu.Items.Add("STAFF");
+                    for (int i = 1; i <= cbChucVu.Items.Count; i++)
+                    {
+                        cbChucVu.Items.RemoveAt(i);
+                    }
+
+                }
+            }
+            catch
             {
-                cbChucVu.Items.Add("STAFF");
+
             }
               
             
@@ -383,7 +400,8 @@ namespace QuanLyKTX.User
                     txtXacNhanMatKhau.Clear();
                     txtSDT.Clear();
                     txtEmail.Clear();
-                    ktErrorEmail = 1;
+                    errorPro.Clear();
+                    txtEmail.BackColor = Color.White;
                     cbChucVu.SelectedIndex = -1;
                     ktTxtChange = 0;
                 }
@@ -718,5 +736,7 @@ namespace QuanLyKTX.User
             picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");
             picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
+        
     }
 }
