@@ -386,7 +386,7 @@ namespace QuanLyKTX.ThietBi_Phong
             this.dgv_TbiPhong.ReadOnly = true;
             this.dgv_TbiPhong.RowHeadersWidth = 51;
             this.dgv_TbiPhong.RowTemplate.Height = 24;
-            this.dgv_TbiPhong.Size = new System.Drawing.Size(815, 519);
+            this.dgv_TbiPhong.Size = new System.Drawing.Size(848, 519);
             this.dgv_TbiPhong.TabIndex = 6;
             this.dgv_TbiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TbiPhong_CellClick);
             // 
@@ -497,9 +497,9 @@ namespace QuanLyKTX.ThietBi_Phong
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.btn_TimKiem);
-            this.groupBox3.Location = new System.Drawing.Point(905, 549);
+            this.groupBox3.Location = new System.Drawing.Point(875, 549);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(295, 196);
+            this.groupBox3.Size = new System.Drawing.Size(358, 196);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
@@ -507,11 +507,11 @@ namespace QuanLyKTX.ThietBi_Phong
             // btn_Show
             // 
             this.btn_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Show.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
+            this.btn_Show.Image = global::QuanLyKTX.Properties.Resources.Doc32;
             this.btn_Show.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Show.Location = new System.Drawing.Point(147, 134);
             this.btn_Show.Name = "btn_Show";
-            this.btn_Show.Size = new System.Drawing.Size(131, 45);
+            this.btn_Show.Size = new System.Drawing.Size(183, 45);
             this.btn_Show.TabIndex = 9;
             this.btn_Show.Text = "HIển thị tất cả";
             this.btn_Show.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -525,7 +525,7 @@ namespace QuanLyKTX.ThietBi_Phong
             "Tất cả"});
             this.cbo_maphong_search.Location = new System.Drawing.Point(147, 37);
             this.cbo_maphong_search.Name = "cbo_maphong_search";
-            this.cbo_maphong_search.Size = new System.Drawing.Size(129, 24);
+            this.cbo_maphong_search.Size = new System.Drawing.Size(183, 24);
             this.cbo_maphong_search.TabIndex = 8;
             // 
             // cbo_matb_search
@@ -535,7 +535,7 @@ namespace QuanLyKTX.ThietBi_Phong
             "Tất cả"});
             this.cbo_matb_search.Location = new System.Drawing.Point(147, 89);
             this.cbo_matb_search.Name = "cbo_matb_search";
-            this.cbo_matb_search.Size = new System.Drawing.Size(129, 24);
+            this.cbo_matb_search.Size = new System.Drawing.Size(183, 24);
             this.cbo_matb_search.TabIndex = 7;
             // 
             // label7
@@ -575,7 +575,7 @@ namespace QuanLyKTX.ThietBi_Phong
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1212, 759);
+            this.ClientSize = new System.Drawing.Size(1245, 759);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_TbiPhong);

@@ -525,7 +525,7 @@ namespace QuanLyKTX.HoaDon
             this.btn_inHd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_inHd.Location = new System.Drawing.Point(678, 30);
             this.btn_inHd.Name = "btn_inHd";
-            this.btn_inHd.Size = new System.Drawing.Size(134, 45);
+            this.btn_inHd.Size = new System.Drawing.Size(146, 45);
             this.btn_inHd.TabIndex = 16;
             this.btn_inHd.Text = "In hóa đơn";
             this.btn_inHd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

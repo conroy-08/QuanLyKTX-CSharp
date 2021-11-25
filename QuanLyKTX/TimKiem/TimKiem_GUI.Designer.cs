@@ -128,9 +128,9 @@ namespace QuanLyKTX.TimKiem
             this.btn_InExcel.BackgroundImage = global::QuanLyKTX.Properties.Resources.SaoLuu32;
             this.btn_InExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_InExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_InExcel.Location = new System.Drawing.Point(129, 54);
+            this.btn_InExcel.Location = new System.Drawing.Point(110, 56);
             this.btn_InExcel.Name = "btn_InExcel";
-            this.btn_InExcel.Size = new System.Drawing.Size(160, 46);
+            this.btn_InExcel.Size = new System.Drawing.Size(160, 51);
             this.btn_InExcel.TabIndex = 28;
             this.btn_InExcel.Text = "In danh sách ";
             this.btn_InExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,7 +163,7 @@ namespace QuanLyKTX.TimKiem
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(211, 199);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 54);
+            this.button1.Size = new System.Drawing.Size(135, 54);
             this.button1.TabIndex = 20;
             this.button1.Text = "Reset";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -177,7 +177,7 @@ namespace QuanLyKTX.TimKiem
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(211, 294);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 54);
+            this.button2.Size = new System.Drawing.Size(135, 54);
             this.button2.TabIndex = 7;
             this.button2.Text = "Thoát";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,7 +191,7 @@ namespace QuanLyKTX.TimKiem
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(29, 294);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 54);
+            this.button3.Size = new System.Drawing.Size(156, 54);
             this.button3.TabIndex = 9;
             this.button3.Text = "Hiển thị tất cả";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -228,7 +228,7 @@ namespace QuanLyKTX.TimKiem
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(29, 201);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 54);
+            this.button4.Size = new System.Drawing.Size(156, 54);
             this.button4.TabIndex = 6;
             this.button4.Text = "Tìm kiếm";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

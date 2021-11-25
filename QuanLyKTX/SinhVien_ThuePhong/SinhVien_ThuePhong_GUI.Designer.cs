@@ -253,7 +253,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
             this.groupBox3.Controls.Add(this.btn_TimKiem);
             this.groupBox3.Location = new System.Drawing.Point(1175, 237);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(312, 196);
+            this.groupBox3.Size = new System.Drawing.Size(331, 196);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
@@ -265,7 +265,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
             "Tất cả"});
             this.cbo_MaSoThue_search.Location = new System.Drawing.Point(147, 54);
             this.cbo_MaSoThue_search.Name = "cbo_MaSoThue_search";
-            this.cbo_MaSoThue_search.Size = new System.Drawing.Size(129, 24);
+            this.cbo_MaSoThue_search.Size = new System.Drawing.Size(165, 24);
             this.cbo_MaSoThue_search.TabIndex = 11;
             // 
             // label23
@@ -280,11 +280,11 @@ namespace QuanLyKTX.SinhVien_DatPhong
             // btn_Show
             // 
             this.btn_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Show.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
+            this.btn_Show.Image = global::QuanLyKTX.Properties.Resources.Doc32;
             this.btn_Show.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Show.Location = new System.Drawing.Point(147, 116);
             this.btn_Show.Name = "btn_Show";
-            this.btn_Show.Size = new System.Drawing.Size(131, 45);
+            this.btn_Show.Size = new System.Drawing.Size(165, 55);
             this.btn_Show.TabIndex = 9;
             this.btn_Show.Text = "HIển thị tất cả";
             this.btn_Show.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -298,7 +298,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TimKiem.Location = new System.Drawing.Point(8, 116);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(122, 45);
+            this.btn_TimKiem.Size = new System.Drawing.Size(122, 55);
             this.btn_TimKiem.TabIndex = 6;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

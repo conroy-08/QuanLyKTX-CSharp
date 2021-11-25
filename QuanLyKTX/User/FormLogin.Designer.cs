@@ -95,11 +95,11 @@ namespace QuanLyKTX.User
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(140, 115);
+            this.lblTitle.Location = new System.Drawing.Point(179, 118);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(244, 29);
+            this.lblTitle.Size = new System.Drawing.Size(122, 29);
             this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "Xin chào quý khách";
+            this.lblTitle.Text = "Xin chào ";
             // 
             // lblStatus
             // 
