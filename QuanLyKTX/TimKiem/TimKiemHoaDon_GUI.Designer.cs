@@ -40,13 +40,17 @@ namespace QuanLyKTX.TimKiem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnHienThiTatCa = new System.Windows.Forms.Button();
             this.btn_InExcel = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtGridTimKiem = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.lblNgayDong = new System.Windows.Forms.Label();
+            this.dtp_NgayDong = new System.Windows.Forms.DateTimePicker();
+            this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +71,10 @@ namespace QuanLyKTX.TimKiem
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.dtp_NgayDong);
+            this.groupBox4.Controls.Add(this.lblNgayDong);
+            this.groupBox4.Controls.Add(this.txtTongTien);
+            this.groupBox4.Controls.Add(this.lblTongTien);
             this.groupBox4.Controls.Add(this.cmbMaHD);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.txtKhuNha);
@@ -77,7 +85,7 @@ namespace QuanLyKTX.TimKiem
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(24, 25);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(574, 188);
+            this.groupBox4.Size = new System.Drawing.Size(601, 188);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin tìm kiếm";
@@ -87,7 +95,7 @@ namespace QuanLyKTX.TimKiem
             this.cmbMaHD.FormattingEnabled = true;
             this.cmbMaHD.Location = new System.Drawing.Point(403, 42);
             this.cmbMaHD.Name = "cmbMaHD";
-            this.cmbMaHD.Size = new System.Drawing.Size(153, 24);
+            this.cmbMaHD.Size = new System.Drawing.Size(168, 24);
             this.cmbMaHD.TabIndex = 7;
             this.cmbMaHD.Click += new System.EventHandler(this.cmbMaHD_Click);
             // 
@@ -153,42 +161,30 @@ namespace QuanLyKTX.TimKiem
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnHienThiTatCa);
+            this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.btn_InExcel);
             this.groupBox3.Controls.Add(this.btnReset);
             this.groupBox3.Controls.Add(this.btnTimKiem);
-            this.groupBox3.Location = new System.Drawing.Point(604, 25);
+            this.groupBox3.Location = new System.Drawing.Point(631, 25);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(416, 188);
+            this.groupBox3.Size = new System.Drawing.Size(389, 188);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thao tác";
-            // 
-            // btnHienThiTatCa
-            // 
-            this.btnHienThiTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHienThiTatCa.Image = global::QuanLyKTX.Properties.Resources.Doc32;
-            this.btnHienThiTatCa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHienThiTatCa.Location = new System.Drawing.Point(24, 107);
-            this.btnHienThiTatCa.Name = "btnHienThiTatCa";
-            this.btnHienThiTatCa.Size = new System.Drawing.Size(146, 51);
-            this.btnHienThiTatCa.TabIndex = 22;
-            this.btnHienThiTatCa.Text = "Hiển thị tất cả";
-            this.btnHienThiTatCa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHienThiTatCa.UseVisualStyleBackColor = true;
             // 
             // btn_InExcel
             // 
             this.btn_InExcel.BackgroundImage = global::QuanLyKTX.Properties.Resources.SaoLuu32;
             this.btn_InExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_InExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_InExcel.Location = new System.Drawing.Point(215, 107);
+            this.btn_InExcel.Location = new System.Drawing.Point(24, 107);
             this.btn_InExcel.Name = "btn_InExcel";
-            this.btn_InExcel.Size = new System.Drawing.Size(152, 51);
+            this.btn_InExcel.Size = new System.Drawing.Size(162, 51);
             this.btn_InExcel.TabIndex = 29;
             this.btn_InExcel.Text = "In danh sách ";
             this.btn_InExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_InExcel.UseVisualStyleBackColor = true;
+            this.btn_InExcel.Click += new System.EventHandler(this.btn_InExcel_Click);
             // 
             // btnReset
             // 
@@ -202,6 +198,7 @@ namespace QuanLyKTX.TimKiem
             this.btnReset.Text = "Reset";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnTimKiem
             // 
@@ -210,7 +207,7 @@ namespace QuanLyKTX.TimKiem
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.Location = new System.Drawing.Point(24, 29);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(146, 54);
+            this.btnTimKiem.Size = new System.Drawing.Size(162, 54);
             this.btnTimKiem.TabIndex = 7;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,7 +219,7 @@ namespace QuanLyKTX.TimKiem
             this.groupBox2.Controls.Add(this.dtGridTimKiem);
             this.groupBox2.Location = new System.Drawing.Point(26, 261);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1052, 211);
+            this.groupBox2.Size = new System.Drawing.Size(1052, 254);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
@@ -234,34 +231,69 @@ namespace QuanLyKTX.TimKiem
             this.dtGridTimKiem.Name = "dtGridTimKiem";
             this.dtGridTimKiem.RowHeadersWidth = 51;
             this.dtGridTimKiem.RowTemplate.Height = 24;
-            this.dtGridTimKiem.Size = new System.Drawing.Size(1027, 179);
+            this.dtGridTimKiem.Size = new System.Drawing.Size(1027, 222);
             this.dtGridTimKiem.TabIndex = 0;
+            this.dtGridTimKiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridTimKiem_CellClick);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(947, 478);
+            this.button2.Location = new System.Drawing.Point(215, 108);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 50);
+            this.button2.Size = new System.Drawing.Size(152, 50);
             this.button2.TabIndex = 23;
             this.button2.Text = "Thoát";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Location = new System.Drawing.Point(302, 91);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(80, 17);
+            this.lblTongTien.TabIndex = 8;
+            this.lblTongTien.Text = "Tổng tiền  :";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(403, 88);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(168, 22);
+            this.txtTongTien.TabIndex = 9;
+            // 
+            // lblNgayDong
+            // 
+            this.lblNgayDong.AutoSize = true;
+            this.lblNgayDong.Location = new System.Drawing.Point(302, 139);
+            this.lblNgayDong.Name = "lblNgayDong";
+            this.lblNgayDong.Size = new System.Drawing.Size(85, 17);
+            this.lblNgayDong.TabIndex = 10;
+            this.lblNgayDong.Text = "Ngày đóng :";
+            // 
+            // dtp_NgayDong
+            // 
+            this.dtp_NgayDong.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_NgayDong.Location = new System.Drawing.Point(403, 134);
+            this.dtp_NgayDong.Name = "dtp_NgayDong";
+            this.dtp_NgayDong.Size = new System.Drawing.Size(168, 22);
+            this.dtp_NgayDong.TabIndex = 31;
             // 
             // TimKiemHoaDon_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1106, 540);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1106, 526);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "TimKiemHoaDon_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TÌM KIẾM HÓA ĐƠN";
             this.Load += new System.EventHandler(this.TimKiemHoaDon_GUI_Load);
             this.groupBox1.ResumeLayout(false);
@@ -292,7 +324,11 @@ namespace QuanLyKTX.TimKiem
         private System.Windows.Forms.Button btn_InExcel;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnHienThiTatCa;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label lblNgayDong;
+        private System.Windows.Forms.DateTimePicker dtp_NgayDong;
+        private System.Windows.Forms.SaveFileDialog dlgSaveFile;
     }
 }

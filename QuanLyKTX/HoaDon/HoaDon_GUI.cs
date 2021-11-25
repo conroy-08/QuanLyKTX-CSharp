@@ -53,6 +53,9 @@ namespace QuanLyKTX.HoaDon
                 rdb_DaDong.Visible = false; rdb_DaDong.Enabled = false;
                 btn_sua.Enabled = false;
                 btn_Luu.Enabled = false;
+                btn_Them.Enabled = false;
+                cmbNam.Enabled = false;
+                cbThang.Enabled = false;
                 cbMaPhong.Text = "";
                 cb_MaHD.Text = "";
                 addItemComboBoxThang();
@@ -92,7 +95,9 @@ namespace QuanLyKTX.HoaDon
                     txtMHD.Text = txtTienDien.Text = txtTienNc.Text = txtTienVeSinh.Text = txtTienPhat.Text = "";
                     btn_Them.Enabled = true;
                     btn_Luu.Enabled = false;
-                
+                    cmbNam.Enabled = true;
+                    cbThang.Enabled = true;
+
             }
             catch
             {
@@ -106,6 +111,16 @@ namespace QuanLyKTX.HoaDon
             if (cbMaPhong.Text.Trim() == "")
             {
                 MessageBox.Show(" Không thể lập mã hóa đơn !. Bởi vì bạn chưa chọn mã phòng !!!!", " CẢNH BÁO ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(cbThang.Text == "")
+            {
+                MessageBox.Show(" Không thể lập mã hóa đơn !. Bởi vì bạn chưa chọn tháng !!!!", " CẢNH BÁO ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cmbNam.Text == "")
+            {
+                MessageBox.Show(" Không thể lập mã hóa đơn !. Bởi vì bạn chưa chọn năm !!!!", " CẢNH BÁO ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -139,8 +154,6 @@ namespace QuanLyKTX.HoaDon
                 this.Close();
             }
         }
-
-
 
         double TinhTienHoaDon()
         {
@@ -338,8 +351,6 @@ namespace QuanLyKTX.HoaDon
 
              
         }
-
-      
 
         private void OpenDataGridView(string MaHD)
         {
@@ -654,5 +665,6 @@ namespace QuanLyKTX.HoaDon
             int yyyy = int.Parse(cmbNam.Text);
             dtp_NgayHetHan.Value = new DateTime(yyyy, mm, 10);
         }
+
     }
 }
