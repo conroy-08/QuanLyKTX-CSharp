@@ -48,7 +48,7 @@ namespace QuanLyKTX.User
         public static bool QLNhanVien;
         public static string ROLES = "";
         public static string TenTaiKhoan = "";
-
+        public static bool Checked = false;
 
         private bool Phan_Quyen(int col)
         {
@@ -67,8 +67,8 @@ namespace QuanLyKTX.User
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (txtUser.Text.Length == 0 || txtPass.Text.Length == 0)//nếu trống thì cho lable hiển thị là chưa nhập
-            {    
-                
+            {
+                Checked = false;
                 lblStatus.BackColor = Color.Pink;
                 lblStatus.Text = "Bạn chưa nhập tài khoản hoặc mật khẩu.";
             }
@@ -80,6 +80,7 @@ namespace QuanLyKTX.User
 
                 if (count == 0)
                 {
+                    Checked = false;
                     lblStatus.BackColor = Color.Pink;
                     lblStatus.Text = "Tài khoản hoặc mật khẩu không đúng";
                 }
@@ -113,7 +114,7 @@ namespace QuanLyKTX.User
                     QLPhongThietBi = Phan_Quyen(15);
                     ThongKe = Phan_Quyen(16);
                     PhanQuyen = Phan_Quyen(17);
-                    
+                    Checked = true;
                     this.Close();
                 }
             }
@@ -130,6 +131,17 @@ namespace QuanLyKTX.User
         {
             Application.Exit();
      
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+            lblStatus.Text = "";
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+            lblStatus.Text = "";
         }
     }
 }

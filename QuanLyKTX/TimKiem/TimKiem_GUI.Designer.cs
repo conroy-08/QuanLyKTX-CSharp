@@ -125,11 +125,15 @@ namespace QuanLyKTX.TimKiem
             // 
             // btn_InExcel
             // 
+            this.btn_InExcel.BackgroundImage = global::QuanLyKTX.Properties.Resources.SaoLuu32;
+            this.btn_InExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_InExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_InExcel.Location = new System.Drawing.Point(129, 54);
             this.btn_InExcel.Name = "btn_InExcel";
-            this.btn_InExcel.Size = new System.Drawing.Size(93, 46);
+            this.btn_InExcel.Size = new System.Drawing.Size(160, 46);
             this.btn_InExcel.TabIndex = 28;
-            this.btn_InExcel.Text = "In";
+            this.btn_InExcel.Text = "In danh sách ";
+            this.btn_InExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_InExcel.UseVisualStyleBackColor = true;
             this.btn_InExcel.Click += new System.EventHandler(this.btc_InExcel_Click);
             // 
@@ -154,6 +158,7 @@ namespace QuanLyKTX.TimKiem
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(211, 199);
@@ -167,6 +172,7 @@ namespace QuanLyKTX.TimKiem
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(211, 294);
@@ -180,6 +186,7 @@ namespace QuanLyKTX.TimKiem
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(29, 294);
@@ -216,6 +223,7 @@ namespace QuanLyKTX.TimKiem
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(29, 201);
@@ -556,10 +564,11 @@ namespace QuanLyKTX.TimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1492, 781);
             this.Controls.Add(this.dgv_TimKiem);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "TimKiem_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

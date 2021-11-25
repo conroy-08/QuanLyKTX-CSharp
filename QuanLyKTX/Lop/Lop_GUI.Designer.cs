@@ -30,6 +30,7 @@ namespace QuanLyKTX.Lop
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_AddKhoa = new System.Windows.Forms.Button();
             this.lb_TenKhoa = new System.Windows.Forms.Label();
             this.cbo_Khoa = new System.Windows.Forms.ComboBox();
             this.txt_TenLop = new System.Windows.Forms.TextBox();
@@ -41,8 +42,6 @@ namespace QuanLyKTX.Lop
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgv_Lop = new System.Windows.Forms.DataGridView();
-            this.btn_AddKhoa = new System.Windows.Forms.Button();
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_TimKiem = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@ namespace QuanLyKTX.Lop
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
+            this.dgv_Lop = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,12 +73,23 @@ namespace QuanLyKTX.Lop
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
+            // btn_AddKhoa
+            // 
+            this.btn_AddKhoa.Image = global::QuanLyKTX.Properties.Resources.Them32_11;
+            this.btn_AddKhoa.Location = new System.Drawing.Point(427, 157);
+            this.btn_AddKhoa.Name = "btn_AddKhoa";
+            this.btn_AddKhoa.Size = new System.Drawing.Size(51, 49);
+            this.btn_AddKhoa.TabIndex = 13;
+            this.btn_AddKhoa.UseVisualStyleBackColor = true;
+            this.btn_AddKhoa.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lb_TenKhoa
             // 
             this.lb_TenKhoa.AutoSize = true;
+            this.lb_TenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_TenKhoa.Location = new System.Drawing.Point(114, 175);
             this.lb_TenKhoa.Name = "lb_TenKhoa";
-            this.lb_TenKhoa.Size = new System.Drawing.Size(47, 18);
+            this.lb_TenKhoa.Size = new System.Drawing.Size(52, 18);
             this.lb_TenKhoa.TabIndex = 5;
             this.lb_TenKhoa.Text = "Khoa:";
             // 
@@ -107,18 +118,20 @@ namespace QuanLyKTX.Lop
             // lbl_TenLop
             // 
             this.lbl_TenLop.AutoSize = true;
+            this.lbl_TenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TenLop.Location = new System.Drawing.Point(114, 131);
             this.lbl_TenLop.Name = "lbl_TenLop";
-            this.lbl_TenLop.Size = new System.Drawing.Size(66, 18);
+            this.lbl_TenLop.Size = new System.Drawing.Size(74, 18);
             this.lbl_TenLop.TabIndex = 2;
             this.lbl_TenLop.Text = "Tên Lớp:";
             // 
             // lbl_MaLop
             // 
             this.lbl_MaLop.AutoSize = true;
+            this.lbl_MaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MaLop.Location = new System.Drawing.Point(114, 85);
             this.lbl_MaLop.Name = "lbl_MaLop";
-            this.lbl_MaLop.Size = new System.Drawing.Size(62, 18);
+            this.lbl_MaLop.Size = new System.Drawing.Size(69, 18);
             this.lbl_MaLop.TabIndex = 1;
             this.lbl_MaLop.Text = "Mã Lớp:";
             // 
@@ -146,9 +159,10 @@ namespace QuanLyKTX.Lop
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 17);
+            this.label2.Size = new System.Drawing.Size(40, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Lớp:";
             // 
@@ -176,30 +190,9 @@ namespace QuanLyKTX.Lop
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thao tác";
             // 
-            // dgv_Lop
-            // 
-            this.dgv_Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Lop.Location = new System.Drawing.Point(7, 286);
-            this.dgv_Lop.Name = "dgv_Lop";
-            this.dgv_Lop.ReadOnly = true;
-            this.dgv_Lop.RowHeadersWidth = 51;
-            this.dgv_Lop.RowTemplate.Height = 24;
-            this.dgv_Lop.Size = new System.Drawing.Size(1170, 381);
-            this.dgv_Lop.TabIndex = 10;
-            this.dgv_Lop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Lop_CellClick);
-            // 
-            // btn_AddKhoa
-            // 
-            this.btn_AddKhoa.Image = global::QuanLyKTX.Properties.Resources.Them32_11;
-            this.btn_AddKhoa.Location = new System.Drawing.Point(427, 157);
-            this.btn_AddKhoa.Name = "btn_AddKhoa";
-            this.btn_AddKhoa.Size = new System.Drawing.Size(51, 49);
-            this.btn_AddKhoa.TabIndex = 13;
-            this.btn_AddKhoa.UseVisualStyleBackColor = true;
-            this.btn_AddKhoa.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btn_Luu
             // 
+            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Luu.Location = new System.Drawing.Point(261, 33);
@@ -213,6 +206,7 @@ namespace QuanLyKTX.Lop
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.btn_Thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Thoat.Location = new System.Drawing.Point(425, 193);
@@ -226,6 +220,7 @@ namespace QuanLyKTX.Lop
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TimKiem.Location = new System.Drawing.Point(425, 121);
@@ -239,6 +234,7 @@ namespace QuanLyKTX.Lop
             // 
             // btn_Reset
             // 
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reset.Location = new System.Drawing.Point(435, 33);
@@ -252,6 +248,7 @@ namespace QuanLyKTX.Lop
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Image = global::QuanLyKTX.Properties.Resources.x;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Xoa.Location = new System.Drawing.Point(322, 33);
@@ -265,6 +262,7 @@ namespace QuanLyKTX.Lop
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sua.Location = new System.Drawing.Point(202, 33);
@@ -278,6 +276,7 @@ namespace QuanLyKTX.Lop
             // 
             // btn_Them
             // 
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.Image = global::QuanLyKTX.Properties.Resources.Them32_1;
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Them.Location = new System.Drawing.Point(85, 33);
@@ -289,14 +288,29 @@ namespace QuanLyKTX.Lop
             this.btn_Them.UseVisualStyleBackColor = true;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
+            // dgv_Lop
+            // 
+            this.dgv_Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Lop.Location = new System.Drawing.Point(7, 286);
+            this.dgv_Lop.Name = "dgv_Lop";
+            this.dgv_Lop.ReadOnly = true;
+            this.dgv_Lop.RowHeadersWidth = 51;
+            this.dgv_Lop.RowTemplate.Height = 24;
+            this.dgv_Lop.Size = new System.Drawing.Size(1170, 381);
+            this.dgv_Lop.TabIndex = 10;
+            this.dgv_Lop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Lop_CellClick);
+            // 
             // Lop_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1185, 679);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_Lop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Lop_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ LỚP";

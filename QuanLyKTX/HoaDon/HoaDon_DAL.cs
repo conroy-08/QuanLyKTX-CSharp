@@ -35,7 +35,7 @@ namespace QuanLyKTX.HoaDon
         }
 
 
-        public void DAL_insert_HoaDon(string MaPhong , string MaHD , DateTime Thang , DateTime Nam , double TienNha ,double TienDien , double TienNc , double TienVs ,
+        public void DAL_insert_HoaDon(string MaPhong , string MaHD , int Thang , int Nam , double TienNha ,double TienDien , double TienNc , double TienVs ,
             double TienPhat, DateTime NgayHetHan,double TongTien , int TrangThai)
         {
             name = new string[12];

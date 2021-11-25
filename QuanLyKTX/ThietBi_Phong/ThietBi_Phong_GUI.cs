@@ -79,6 +79,11 @@ namespace QuanLyKTX.ThietBi_Phong
 
         private void ThietBi_Phong_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
+
             try
             {
                 cbo_TinhTrang.SelectedIndex = 2;

@@ -45,6 +45,7 @@ namespace QuanLyKTX.SinhVien
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@ namespace QuanLyKTX.SinhVien
             this.label6 = new System.Windows.Forms.Label();
             this.cbo_Khoa = new System.Windows.Forms.ComboBox();
             this.btn_AddLop = new System.Windows.Forms.Button();
-            this.btn_Reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SinhVien)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -192,6 +192,7 @@ namespace QuanLyKTX.SinhVien
             // 
             // btn_Luu
             // 
+            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Luu.Location = new System.Drawing.Point(184, 31);
@@ -205,6 +206,7 @@ namespace QuanLyKTX.SinhVien
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.btn_Thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Thoat.Location = new System.Drawing.Point(337, 183);
@@ -218,6 +220,7 @@ namespace QuanLyKTX.SinhVien
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TimKiem.Location = new System.Drawing.Point(337, 120);
@@ -229,8 +232,23 @@ namespace QuanLyKTX.SinhVien
             this.btn_TimKiem.UseVisualStyleBackColor = true;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
+            this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reset.Location = new System.Drawing.Point(368, 31);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(91, 45);
+            this.btn_Reset.TabIndex = 3;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Image = global::QuanLyKTX.Properties.Resources.x;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Xoa.Location = new System.Drawing.Point(255, 31);
@@ -244,6 +262,7 @@ namespace QuanLyKTX.SinhVien
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sua.Location = new System.Drawing.Point(135, 31);
@@ -257,6 +276,7 @@ namespace QuanLyKTX.SinhVien
             // 
             // btn_Them
             // 
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.Image = global::QuanLyKTX.Properties.Resources.Them32_1;
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Them.Location = new System.Drawing.Point(18, 31);
@@ -404,27 +424,16 @@ namespace QuanLyKTX.SinhVien
             this.btn_AddLop.UseVisualStyleBackColor = true;
             this.btn_AddLop.Click += new System.EventHandler(this.btn_AddLop_Click);
             // 
-            // btn_Reset
-            // 
-            this.btn_Reset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
-            this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Reset.Location = new System.Drawing.Point(368, 31);
-            this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(91, 45);
-            this.btn_Reset.TabIndex = 3;
-            this.btn_Reset.Text = "Reset";
-            this.btn_Reset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Reset.UseVisualStyleBackColor = true;
-            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
-            // 
             // SinhVien_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1195, 679);
             this.Controls.Add(this.dgv_SinhVien);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SinhVien_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

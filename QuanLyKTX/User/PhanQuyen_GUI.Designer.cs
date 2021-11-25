@@ -60,6 +60,7 @@ namespace QuanLyKTX.User
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightBlue;
             this.panel2.Controls.Add(this.checkPhongThietBi);
             this.panel2.Controls.Add(this.checkThietBi);
             this.panel2.Controls.Add(this.checkPhong);
@@ -305,6 +306,7 @@ namespace QuanLyKTX.User
             // 
             // btnSua
             // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(4, 4);
@@ -329,7 +331,7 @@ namespace QuanLyKTX.User
             this.MaximizeBox = false;
             this.Name = "PhanQuyen_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PhanQuyen";
+            this.Text = "PHÂN QUYỀN";
             this.Load += new System.EventHandler(this.PhanQuyen_GUI_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

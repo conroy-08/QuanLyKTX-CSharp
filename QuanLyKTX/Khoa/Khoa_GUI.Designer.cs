@@ -68,9 +68,10 @@ namespace QuanLyKTX.Khoa
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Khoa:";
             // 
@@ -100,6 +101,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_Luu
             // 
+            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Luu.Location = new System.Drawing.Point(193, 37);
@@ -124,6 +126,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_Reset
             // 
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reset.Location = new System.Drawing.Point(368, 37);
@@ -137,6 +140,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.btn_Thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Thoat.Location = new System.Drawing.Point(337, 183);
@@ -150,6 +154,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Image = global::QuanLyKTX.Properties.Resources.x;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Xoa.Location = new System.Drawing.Point(257, 37);
@@ -163,6 +168,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sua.Location = new System.Drawing.Point(137, 37);
@@ -176,6 +182,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TimKiem.Location = new System.Drawing.Point(337, 116);
@@ -189,6 +196,7 @@ namespace QuanLyKTX.Khoa
             // 
             // btn_Them
             // 
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.Image = global::QuanLyKTX.Properties.Resources.Them32_1;
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Them.Location = new System.Drawing.Point(18, 37);
@@ -217,18 +225,20 @@ namespace QuanLyKTX.Khoa
             // lbl_TenKhuNha
             // 
             this.lbl_TenKhuNha.AutoSize = true;
+            this.lbl_TenKhuNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TenKhuNha.Location = new System.Drawing.Point(72, 140);
             this.lbl_TenKhuNha.Name = "lbl_TenKhuNha";
-            this.lbl_TenKhuNha.Size = new System.Drawing.Size(76, 18);
+            this.lbl_TenKhuNha.Size = new System.Drawing.Size(85, 18);
             this.lbl_TenKhuNha.TabIndex = 2;
             this.lbl_TenKhuNha.Text = "Tên Khoa:";
             // 
             // lbl_MaKhoa
             // 
             this.lbl_MaKhoa.AutoSize = true;
+            this.lbl_MaKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MaKhoa.Location = new System.Drawing.Point(72, 81);
             this.lbl_MaKhoa.Name = "lbl_MaKhoa";
-            this.lbl_MaKhoa.Size = new System.Drawing.Size(72, 18);
+            this.lbl_MaKhoa.Size = new System.Drawing.Size(80, 18);
             this.lbl_MaKhoa.TabIndex = 1;
             this.lbl_MaKhoa.Text = "Mã Khoa:";
             // 
@@ -260,10 +270,12 @@ namespace QuanLyKTX.Khoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1091, 666);
             this.Controls.Add(this.dgv_Khoa);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Khoa_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -64,6 +64,7 @@ namespace QuanLyKTX.User
             this.btnInDS = new System.Windows.Forms.Button();
             this.errorPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
@@ -384,12 +385,13 @@ namespace QuanLyKTX.User
             this.flowLayoutPanel1.Controls.Add(this.btnSua);
             this.flowLayoutPanel1.Controls.Add(this.btnXoa);
             this.flowLayoutPanel1.Controls.Add(this.btnInDS);
+            this.flowLayoutPanel1.Controls.Add(this.btnReset);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(689, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(582, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(610, 58);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(717, 58);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // btnThem
@@ -452,10 +454,25 @@ namespace QuanLyKTX.User
             // 
             this.errorPro.ContainerControl = this;
             // 
+            // btnReset
+            // 
+            this.btnReset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong16;
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReset.Location = new System.Drawing.Point(595, 5);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(5);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(108, 48);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // NhanVien_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1299, 623);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtGridNV);
@@ -464,7 +481,7 @@ namespace QuanLyKTX.User
             this.MaximizeBox = false;
             this.Name = "NhanVien_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thông tin nhân viên";
+            this.Text = "THÔNG TIN NHÂN VIÊN";
             this.Load += new System.EventHandler(this.NhanVien_GUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -515,5 +532,6 @@ namespace QuanLyKTX.User
         private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.Button btnInDS;
         private System.Windows.Forms.SaveFileDialog dlgSaveFile;
+        private System.Windows.Forms.Button btnReset;
     }
 }

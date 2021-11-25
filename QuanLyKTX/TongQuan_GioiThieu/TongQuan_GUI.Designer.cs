@@ -32,11 +32,11 @@ namespace QuanLyKTX.TongQuan_GioiThieu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan_GUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblIntroduce = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblTongQuan = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblSdt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,6 +63,15 @@ namespace QuanLyKTX.TongQuan_GioiThieu
             this.lblIntroduce.Name = "lblIntroduce";
             this.lblIntroduce.Size = new System.Drawing.Size(633, 530);
             this.lblIntroduce.TabIndex = 1;
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.Location = new System.Drawing.Point(24, 582);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(55, 17);
+            this.lblDiaChi.TabIndex = 0;
+            this.lblDiaChi.Text = "Địa chỉ ";
             // 
             // lblTongQuan
             // 
@@ -104,15 +113,6 @@ namespace QuanLyKTX.TongQuan_GioiThieu
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Liên hệ ";
             // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(24, 582);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(55, 17);
-            this.lblDiaChi.TabIndex = 0;
-            this.lblDiaChi.Text = "Địa chỉ ";
-            // 
             // lblSdt
             // 
             this.lblSdt.AutoSize = true;
@@ -126,6 +126,7 @@ namespace QuanLyKTX.TongQuan_GioiThieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1187, 647);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

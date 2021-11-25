@@ -62,6 +62,11 @@ namespace QuanLyKTX.SinhVien
 
         private void Phong_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
+
             try
             {
                 txt_MaSinhVien.Enabled = false;

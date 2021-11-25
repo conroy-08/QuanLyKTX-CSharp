@@ -32,6 +32,9 @@ namespace QuanLyKTX.HoaDon
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbNam = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbThang = new System.Windows.Forms.ComboBox();
             this.txtTienVeSinh = new System.Windows.Forms.TextBox();
             this.rdb_ChuaDong = new System.Windows.Forms.RadioButton();
             this.rdb_DaDong = new System.Windows.Forms.RadioButton();
@@ -40,7 +43,6 @@ namespace QuanLyKTX.HoaDon
             this.lbNgayDong = new System.Windows.Forms.Label();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dtp_NgayLap = new System.Windows.Forms.DateTimePicker();
             this.dtp_NgayHetHan = new System.Windows.Forms.DateTimePicker();
             this.cbMaPhong = new System.Windows.Forms.ComboBox();
             this.txtTienPhat = new System.Windows.Forms.TextBox();
@@ -97,6 +99,9 @@ namespace QuanLyKTX.HoaDon
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbNam);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.cbThang);
             this.groupBox1.Controls.Add(this.txtTienVeSinh);
             this.groupBox1.Controls.Add(this.rdb_ChuaDong);
             this.groupBox1.Controls.Add(this.rdb_DaDong);
@@ -105,7 +110,6 @@ namespace QuanLyKTX.HoaDon
             this.groupBox1.Controls.Add(this.lbNgayDong);
             this.groupBox1.Controls.Add(this.txtThanhTien);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.dtp_NgayLap);
             this.groupBox1.Controls.Add(this.dtp_NgayHetHan);
             this.groupBox1.Controls.Add(this.cbMaPhong);
             this.groupBox1.Controls.Add(this.txtTienPhat);
@@ -133,6 +137,34 @@ namespace QuanLyKTX.HoaDon
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
+            // 
+            // cmbNam
+            // 
+            this.cmbNam.FormattingEnabled = true;
+            this.cmbNam.Location = new System.Drawing.Point(313, 191);
+            this.cmbNam.Name = "cmbNam";
+            this.cmbNam.Size = new System.Drawing.Size(82, 24);
+            this.cmbNam.TabIndex = 37;
+            this.cmbNam.SelectedIndexChanged += new System.EventHandler(this.cmbNam_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(254, 198);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 17);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Năm  :";
+            // 
+            // cbThang
+            // 
+            this.cbThang.FormattingEnabled = true;
+            this.cbThang.Location = new System.Drawing.Point(157, 192);
+            this.cbThang.Name = "cbThang";
+            this.cbThang.Size = new System.Drawing.Size(91, 24);
+            this.cbThang.TabIndex = 35;
+            this.cbThang.SelectedIndexChanged += new System.EventHandler(this.cbThang_SelectedIndexChanged);
             // 
             // txtTienVeSinh
             // 
@@ -211,16 +243,6 @@ namespace QuanLyKTX.HoaDon
             this.label15.Size = new System.Drawing.Size(95, 17);
             this.label15.TabIndex = 27;
             this.label15.Text = "Thành tiền  :";
-            // 
-            // dtp_NgayLap
-            // 
-            this.dtp_NgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_NgayLap.Location = new System.Drawing.Point(157, 190);
-            this.dtp_NgayLap.Name = "dtp_NgayLap";
-            this.dtp_NgayLap.Size = new System.Drawing.Size(238, 23);
-            this.dtp_NgayLap.TabIndex = 26;
-            this.dtp_NgayLap.Value = new System.DateTime(2021, 11, 22, 0, 0, 0, 0);
-            this.dtp_NgayLap.ValueChanged += new System.EventHandler(this.dtp_NgayLap_ValueChanged);
             // 
             // dtp_NgayHetHan
             // 
@@ -319,9 +341,9 @@ namespace QuanLyKTX.HoaDon
             this.label12.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(23, 199);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 17);
+            this.label12.Size = new System.Drawing.Size(65, 17);
             this.label12.TabIndex = 10;
-            this.label12.Text = "Ngày lập  :";
+            this.label12.Text = "Tháng  :";
             // 
             // label11
             // 
@@ -612,7 +634,7 @@ namespace QuanLyKTX.HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1164, 736);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -622,7 +644,7 @@ namespace QuanLyKTX.HoaDon
             this.MaximizeBox = false;
             this.Name = "HoaDon_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hóa Đơn Phòng";
+            this.Text = "HÓA ĐƠN PHÒNG";
             this.Load += new System.EventHandler(this.HoaDon_GUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -669,7 +691,6 @@ namespace QuanLyKTX.HoaDon
         private System.Windows.Forms.Button btn_inHd;
         private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.DateTimePicker dtp_NgayHetHan;
-        private System.Windows.Forms.DateTimePicker dtp_NgayLap;
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btn_sua;
@@ -687,5 +708,8 @@ namespace QuanLyKTX.HoaDon
         private System.Windows.Forms.Button btn_TimKiem;
         private System.Windows.Forms.SaveFileDialog dlgSaveFile;
         private System.Windows.Forms.ErrorProvider errorPro;
+        private System.Windows.Forms.ComboBox cmbNam;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbThang;
     }
 }

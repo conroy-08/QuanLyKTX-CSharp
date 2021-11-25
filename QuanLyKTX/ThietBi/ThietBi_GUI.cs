@@ -58,6 +58,11 @@ namespace QuanLyKTX.ThietBi
         
         private void ThietBi_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
+
             try
             {
                 txt_MaThietBi.Enabled = false;

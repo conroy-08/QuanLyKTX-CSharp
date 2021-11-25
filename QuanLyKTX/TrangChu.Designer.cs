@@ -31,9 +31,6 @@ namespace QuanLyKTX
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
             this.menu_home = new System.Windows.Forms.MenuStrip();
-            this.toolStripLblTenDangNhap = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.quảnLýDanhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKhoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +42,8 @@ namespace QuanLyKTX
             this.quảnLýThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýPhòngThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qlThueTraPhongKTXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thuêPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trảPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.tổngQuanVềKTXToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +51,9 @@ namespace QuanLyKTX
             this.phânQuyềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLblTenDangNhap = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menu_home.SuspendLayout();
             this.toolStripLblTenDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,36 +78,6 @@ namespace QuanLyKTX
             this.menu_home.Size = new System.Drawing.Size(1509, 40);
             this.menu_home.TabIndex = 0;
             this.menu_home.Text = "menuStrip1";
-            // 
-            // toolStripLblTenDangNhap
-            // 
-            this.toolStripLblTenDangNhap.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStripLblTenDangNhap.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStripLblTenDangNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1});
-            this.toolStripLblTenDangNhap.Location = new System.Drawing.Point(0, 640);
-            this.toolStripLblTenDangNhap.Name = "toolStripLblTenDangNhap";
-            this.toolStripLblTenDangNhap.Size = new System.Drawing.Size(1509, 31);
-            this.toolStripLblTenDangNhap.TabIndex = 5;
-            this.toolStripLblTenDangNhap.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(111, 28);
-            this.toolStripLabel1.Text = "toolStripLabel1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1509, 600);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // quảnLýDanhMụcToolStripMenuItem
             // 
@@ -204,11 +176,34 @@ namespace QuanLyKTX
             // 
             // qlThueTraPhongKTXToolStripMenuItem
             // 
+            this.qlThueTraPhongKTXToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thuêPhòngToolStripMenuItem,
+            this.trảPhòngToolStripMenuItem});
             this.qlThueTraPhongKTXToolStripMenuItem.Image = global::QuanLyKTX.Properties.Resources.KTX32;
             this.qlThueTraPhongKTXToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.qlThueTraPhongKTXToolStripMenuItem.Name = "qlThueTraPhongKTXToolStripMenuItem";
-            this.qlThueTraPhongKTXToolStripMenuItem.Size = new System.Drawing.Size(236, 36);
-            this.qlThueTraPhongKTXToolStripMenuItem.Text = "Quản lý thuê trả phòng";
+            this.qlThueTraPhongKTXToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.qlThueTraPhongKTXToolStripMenuItem.Text = "Quản lý thuê - trả phòng";
+            // 
+            // thuêPhòngToolStripMenuItem
+            // 
+            this.thuêPhòngToolStripMenuItem.BackgroundImage = global::QuanLyKTX.Properties.Resources.DanhMuc32;
+            this.thuêPhòngToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.thuêPhòngToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.thuêPhòngToolStripMenuItem.Name = "thuêPhòngToolStripMenuItem";
+            this.thuêPhòngToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
+            this.thuêPhòngToolStripMenuItem.Text = "Thuê Phòng";
+            this.thuêPhòngToolStripMenuItem.Click += new System.EventHandler(this.thuêPhòngToolStripMenuItem_Click);
+            // 
+            // trảPhòngToolStripMenuItem
+            // 
+            this.trảPhòngToolStripMenuItem.BackgroundImage = global::QuanLyKTX.Properties.Resources.Doc32;
+            this.trảPhòngToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.trảPhòngToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trảPhòngToolStripMenuItem.Name = "trảPhòngToolStripMenuItem";
+            this.trảPhòngToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
+            this.trảPhòngToolStripMenuItem.Text = "Trả Phòng";
+            this.trảPhòngToolStripMenuItem.Click += new System.EventHandler(this.trảPhòngToolStripMenuItem_Click);
             // 
             // hóaĐơnToolStripMenuItem
             // 
@@ -272,6 +267,36 @@ namespace QuanLyKTX
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click_1);
             // 
+            // toolStripLblTenDangNhap
+            // 
+            this.toolStripLblTenDangNhap.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStripLblTenDangNhap.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripLblTenDangNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1});
+            this.toolStripLblTenDangNhap.Location = new System.Drawing.Point(0, 640);
+            this.toolStripLblTenDangNhap.Name = "toolStripLblTenDangNhap";
+            this.toolStripLblTenDangNhap.Size = new System.Drawing.Size(1509, 31);
+            this.toolStripLblTenDangNhap.TabIndex = 5;
+            this.toolStripLblTenDangNhap.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 28);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1509, 600);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -323,6 +348,8 @@ namespace QuanLyKTX
         private System.Windows.Forms.ToolStrip toolStripLblTenDangNhap;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem thuêPhòngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trảPhòngToolStripMenuItem;
     }
 }
 

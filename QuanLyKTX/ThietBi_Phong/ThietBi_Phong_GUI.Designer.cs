@@ -40,6 +40,8 @@ namespace QuanLyKTX.ThietBi_Phong
             this.cbo_TinhTrang = new System.Windows.Forms.ComboBox();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_TrangThai = new System.Windows.Forms.TextBox();
             this.btn_AddTB = new System.Windows.Forms.Button();
             this.txt_TenTb = new System.Windows.Forms.TextBox();
             this.cbo_MaTB = new System.Windows.Forms.ComboBox();
@@ -72,8 +74,6 @@ namespace QuanLyKTX.ThietBi_Phong
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.txt_TrangThai = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -197,6 +197,23 @@ namespace QuanLyKTX.ThietBi_Phong
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin Thiết bị";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 130);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 18);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Trạng Thái:";
+            // 
+            // txt_TrangThai
+            // 
+            this.txt_TrangThai.Enabled = false;
+            this.txt_TrangThai.Location = new System.Drawing.Point(100, 127);
+            this.txt_TrangThai.Name = "txt_TrangThai";
+            this.txt_TrangThai.Size = new System.Drawing.Size(135, 24);
+            this.txt_TrangThai.TabIndex = 15;
             // 
             // btn_AddTB
             // 
@@ -390,6 +407,7 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Luu
             // 
+            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Luu.Location = new System.Drawing.Point(195, 49);
@@ -403,6 +421,7 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.btn_Thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Thoat.Location = new System.Drawing.Point(173, 125);
@@ -416,6 +435,7 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Reset
             // 
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reset.Location = new System.Drawing.Point(387, 49);
@@ -429,6 +449,7 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Image = global::QuanLyKTX.Properties.Resources.x;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Xoa.Location = new System.Drawing.Point(255, 49);
@@ -442,6 +463,7 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sua.Location = new System.Drawing.Point(130, 49);
@@ -455,6 +477,7 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Them
             // 
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.Image = global::QuanLyKTX.Properties.Resources.Them32_1;
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Them.Location = new System.Drawing.Point(0, 49);
@@ -483,9 +506,10 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_Show
             // 
+            this.btn_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Show.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.btn_Show.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Show.Location = new System.Drawing.Point(158, 135);
+            this.btn_Show.Location = new System.Drawing.Point(147, 134);
             this.btn_Show.Name = "btn_Show";
             this.btn_Show.Size = new System.Drawing.Size(131, 45);
             this.btn_Show.TabIndex = 9;
@@ -534,9 +558,10 @@ namespace QuanLyKTX.ThietBi_Phong
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TimKiem.Location = new System.Drawing.Point(19, 135);
+            this.btn_TimKiem.Location = new System.Drawing.Point(8, 134);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(122, 45);
             this.btn_TimKiem.TabIndex = 6;
@@ -545,32 +570,17 @@ namespace QuanLyKTX.ThietBi_Phong
             this.btn_TimKiem.UseVisualStyleBackColor = true;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
-            // txt_TrangThai
-            // 
-            this.txt_TrangThai.Enabled = false;
-            this.txt_TrangThai.Location = new System.Drawing.Point(100, 127);
-            this.txt_TrangThai.Name = "txt_TrangThai";
-            this.txt_TrangThai.Size = new System.Drawing.Size(135, 24);
-            this.txt_TrangThai.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 130);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 18);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Trạng Thái:";
-            // 
             // ThietBi_Phong_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1212, 759);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_TbiPhong);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ThietBi_Phong_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

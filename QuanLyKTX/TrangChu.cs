@@ -19,7 +19,8 @@ namespace QuanLyKTX
             InitializeComponent();
         }
 
-      
+       
+
 
         private void quảnLýLớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -137,7 +138,7 @@ namespace QuanLyKTX
 
         private void thoátToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn thoát chứ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn chắc chắn muốn thoát ứng dụng chứ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -147,6 +148,18 @@ namespace QuanLyKTX
         {
             TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlHoaDon();
+        }
+
+        private void thuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.qlSVThuePhong();
+        }
+
+        private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.qlSVTraPhong();
         }
     }
 }

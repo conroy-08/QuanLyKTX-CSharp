@@ -45,6 +45,7 @@ namespace QuanLyKTX.User
             this.lblUserName.AutoSize = true;
             this.lblUserName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(45, 215);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(109, 20);
@@ -55,6 +56,7 @@ namespace QuanLyKTX.User
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(45, 271);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(77, 20);
@@ -67,6 +69,7 @@ namespace QuanLyKTX.User
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(257, 22);
             this.txtUser.TabIndex = 4;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // txtPass
             // 
@@ -75,6 +78,7 @@ namespace QuanLyKTX.User
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(257, 22);
             this.txtPass.TabIndex = 5;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // btnDangNhap
             // 
@@ -90,6 +94,7 @@ namespace QuanLyKTX.User
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(140, 115);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(244, 29);
@@ -119,7 +124,7 @@ namespace QuanLyKTX.User
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(516, 493);
+            this.ClientSize = new System.Drawing.Size(516, 482);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblStatus);
@@ -132,7 +137,7 @@ namespace QuanLyKTX.User
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng Nhập";
+            this.Text = "ĐĂNG NHẬP";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

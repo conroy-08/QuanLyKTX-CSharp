@@ -83,6 +83,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_Luu
             // 
+            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Luu.Location = new System.Drawing.Point(184, 41);
@@ -124,6 +125,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.Image = global::QuanLyKTX.Properties.Resources.Thoat321;
             this.btn_Thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Thoat.Location = new System.Drawing.Point(337, 183);
@@ -137,6 +139,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TimKiem.Image = global::QuanLyKTX.Properties.Resources.TraCuu32;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TimKiem.Location = new System.Drawing.Point(337, 116);
@@ -150,6 +153,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_Reset
             // 
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reset.Image = global::QuanLyKTX.Properties.Resources.ChuyenPhong161;
             this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reset.Location = new System.Drawing.Point(359, 41);
@@ -163,6 +167,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Image = global::QuanLyKTX.Properties.Resources.x;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Xoa.Location = new System.Drawing.Point(257, 41);
@@ -176,6 +181,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Image = global::QuanLyKTX.Properties.Resources.Sua32_11;
             this.btn_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sua.Location = new System.Drawing.Point(137, 41);
@@ -189,6 +195,7 @@ namespace QuanLyKTX.Que
             // 
             // btn_Them
             // 
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.Image = global::QuanLyKTX.Properties.Resources.Them32_1;
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Them.Location = new System.Drawing.Point(18, 41);
@@ -260,10 +267,12 @@ namespace QuanLyKTX.Que
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1091, 666);
             this.Controls.Add(this.dgv_Que);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Que_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

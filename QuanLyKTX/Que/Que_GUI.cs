@@ -35,6 +35,10 @@ namespace QuanLyKTX.Que
 
         private void Que_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
             try
             {
                 txt_MaQue.Enabled = false;

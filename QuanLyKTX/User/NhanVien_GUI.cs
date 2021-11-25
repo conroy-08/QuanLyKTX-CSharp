@@ -41,10 +41,22 @@ namespace QuanLyKTX.User
 
         private void NhanVien_GUI_Load(object sender, EventArgs e)
         {
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            OpenDataGridView();
-            addItemComboBox();
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
+            try
+            {
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+                OpenDataGridView();
+                addItemComboBox();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
         private void OpenDataGridView()
         {
@@ -80,7 +92,8 @@ namespace QuanLyKTX.User
             dtGridNV.Columns[19].Visible = false;
             dtGridNV.Columns[20].Visible = false;
             dtGridNV.AllowUserToAddRows = false;
-            
+            picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");
+            picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void addItemComboBox()
@@ -330,16 +343,19 @@ namespace QuanLyKTX.User
                      + "click vào dấu hiệu cảnh báo (dấu chấm than) bên cạnh để biết thêm chi tiết ",
                      "CẢNH BÁO ",
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else if (checkTenDangNhap(txtTenTaiKhoan.Text))
             {
                 errorPro.SetError(txtTenTaiKhoan, "Tên đăng nhập đã tồn tại ");
                 txtTenTaiKhoan.BackColor = Color.Pink;
+                return;
             }
             else if (checkEmail(txtEmail.Text))
             {
                 errorPro.SetError(txtEmail, "Email đã tồn tại");
                 txtEmail.BackColor = Color.Pink;
+                return;
             }
             else
             {
@@ -377,6 +393,7 @@ namespace QuanLyKTX.User
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            CallTextChanged(sender, e);
             string newTenTaiKhoan = txtTenTaiKhoan.Text;
             string newEmail = txtEmail.Text;
             if (ktErrorDC == 0 || ktErrorMK == 0 || ktErrorTen == 0 || ktErrorXNMK == 0 || ktErrorTenTaiKhoan == 0 || ktErrorSDT == 0 || ktErrorEmail == 0
@@ -387,6 +404,7 @@ namespace QuanLyKTX.User
                      + "click vào dấu hiệu cảnh báo (dấu chấm than) bên cạnh để biết thêm chi tiết ",
                      "CẢNH BÁO ",
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             if (!newTenTaiKhoan.Equals(oldTenTaiKhoan))
@@ -395,7 +413,7 @@ namespace QuanLyKTX.User
                 {
                     errorPro.SetError(txtTenTaiKhoan, "Tên đăng nhập đã tồn tại ");
                     txtTenTaiKhoan.BackColor = Color.Pink;
-
+                    return;
                 }
             }
             else if (!newEmail.Equals(oldEmail))
@@ -404,7 +422,7 @@ namespace QuanLyKTX.User
                 {
                     errorPro.SetError(txtEmail, "Tên đăng nhập đã tồn tại ");
                     txtEmail.BackColor = Color.Pink;
-
+                    return;
                 }
             }
             else
@@ -488,6 +506,7 @@ namespace QuanLyKTX.User
         {
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
+            btnThem.Enabled = false;
             UserId = int.Parse(dtGridNV.Rows[e.RowIndex].Cells[0].Value.ToString());
             oldTenTaiKhoan =  txtTenTaiKhoan.Text = dtGridNV.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtTenNhanVien.Text = dtGridNV.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -511,17 +530,17 @@ namespace QuanLyKTX.User
             if (dtGridNV.Rows[e.RowIndex].Cells[20].Value.ToString() != "")
             {
                 picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\" + dtGridNV.Rows[e.RowIndex].Cells[20].Value.ToString());
-                picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
             {
-                picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");
-                picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+                picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");           
             }
+            picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void btnAnh_Click(object sender, EventArgs e)
         {
+            
             string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\hình\Thumbnail\";
             string[] pathImage;
             OpenFileDialog dlgOpen = new OpenFileDialog();
@@ -669,6 +688,32 @@ namespace QuanLyKTX.User
             {
                 MessageBox.Show("Không có danh sách hàng để in");
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            btnThem.Enabled = true;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            txtTenTaiKhoan.Clear();
+            txtTenNhanVien.Clear();
+            txtMatKhau.Clear();
+            txtDiaChi.Clear();
+            txtXacNhanMatKhau.Clear();
+            txtSDT.Clear();
+            txtEmail.Clear();
+            cbChucVu.SelectedIndex = -1;
+            errorPro.Clear();
+            txtXacNhanMatKhau.BackColor = Color.White;
+            txtMatKhau.BackColor = Color.White;
+            txtDiaChi.BackColor = Color.White;
+            txtEmail.BackColor = Color.White;
+            txtSDT.BackColor = Color.White;
+            txtTenNhanVien.BackColor = Color.White;
+            txtTenTaiKhoan.BackColor = Color.White;
+            cbChucVu.BackColor = Color.White;
+            picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");
+            picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

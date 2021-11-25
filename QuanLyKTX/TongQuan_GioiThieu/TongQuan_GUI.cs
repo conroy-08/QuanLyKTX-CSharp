@@ -19,6 +19,11 @@ namespace QuanLyKTX.TongQuan_GioiThieu
 
         private void TongQuan_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
+
             introduceKTX();
         }
         public void introduceKTX()

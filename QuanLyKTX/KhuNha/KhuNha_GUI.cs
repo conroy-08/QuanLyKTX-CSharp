@@ -34,6 +34,10 @@ namespace QuanLyKTX.KhuNha
 
         private void KhuNha_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
             try
             {
                 txt_MaKhuNha.Enabled = false;

@@ -33,6 +33,10 @@ namespace QuanLyKTX.Khoa
 
         private void Khoa_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
             try
             {
                 txt_MaKhoa.Enabled = false;

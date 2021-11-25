@@ -25,12 +25,24 @@ namespace QuanLyKTX.User
 
         private void PhanQuyen_GUI_Load(object sender, EventArgs e)
         {
-            txtTenTK.Enabled = false;
-            txtMaTK.Enabled = false;
-            txtMK.Enabled = false;
-            dtPhanQuyen.ReadOnly = true;
-            dtPhanQuyen.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            OpenDataGridView();
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
+            try
+            {
+                txtTenTK.Enabled = false;
+                txtMaTK.Enabled = false;
+                txtMK.Enabled = false;
+                dtPhanQuyen.ReadOnly = true;
+                dtPhanQuyen.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                OpenDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
            
         }
         private bool CheckedBox(CheckBox checkBox)//Đây, rất quan trọng, vì sẽ gọi hàm này để tick hoặc ko tick vào ô vuông của checkbox

@@ -64,6 +64,10 @@ namespace QuanLyKTX.Lop
 
         private void Lop_GUI_Load(object sender, EventArgs e)
         {
+            while (!User.FormLogin.Checked)
+            {
+                this.Close();
+            }
             try
             {
                 txt_MaLop.Enabled = false;
