@@ -37,6 +37,8 @@ namespace QuanLyKTX.Que
         {
             while (!User.FormLogin.Checked)
             {
+                User.FormLogin formLogin = new User.FormLogin();
+                formLogin.ShowDialog();
                 this.Close();
             }
             try

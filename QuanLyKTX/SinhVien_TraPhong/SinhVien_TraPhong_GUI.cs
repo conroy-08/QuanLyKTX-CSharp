@@ -213,6 +213,8 @@ namespace QuanLyKTX.SinhVien_TraPhong
         {
             while (!User.FormLogin.Checked)
             {
+                User.FormLogin formLogin = new User.FormLogin();
+                formLogin.ShowDialog();
                 this.Close();
             }
 

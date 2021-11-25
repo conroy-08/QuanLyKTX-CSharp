@@ -34,6 +34,10 @@ namespace QuanLyKTX.HoaDon
             return HoaDon_DAL.findByMaHD(MaHD);
         }
 
+        public DataTable findByMaPhongAndMaHD(string MaPhong,string MaHD)
+        {
+            return HoaDon_DAL.findByMaPhongAndMaHD(MaPhong,MaHD);
+        }
         public DataTable getAll()
         {
             return HoaDon_DAL.getAll();

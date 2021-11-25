@@ -129,13 +129,6 @@ namespace QuanLyKTX
             trangchu.TongQuan();
         }
 
-        private void toolStripMenuTimKiem_Click(object sender, EventArgs e)
-        {
-            TrangChu_BLL trangchu = new TrangChu_BLL();
-            trangchu.TimKiem();
-
-        }
-
         private void thoátToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn chắc chắn muốn thoát ứng dụng chứ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -160,6 +153,19 @@ namespace QuanLyKTX
         {
             TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlSVTraPhong();
+        }
+
+        private void tìmKiếmHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.timkiemHoaDon();
+
+        }
+
+        private void tìmKiếmSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.TimKiem();
         }
     }
 }

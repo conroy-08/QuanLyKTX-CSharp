@@ -102,13 +102,15 @@ namespace QuanLyKTX.SinhVien_DatPhong
             dtp_NgayBD.Enabled = true;
             dtp_NgayKT.Enabled = true;
             txt_GhiChu.Enabled = true;
-            cbo_TTThuePhong.Enabled = true;
+            cbo_TTThuePhong.Enabled = false;
         }
 
         private void SV_Phong_GUI_Load(object sender, EventArgs e)
         {
             while (!User.FormLogin.Checked)
             {
+                User.FormLogin formLogin = new User.FormLogin();
+                formLogin.ShowDialog();
                 this.Close();
             }
             try
@@ -257,17 +259,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
                     }
                 }
 
-                if (cbo_TTThuePhong.SelectedIndex == 2)
-                {
-                    cbo_TTThuePhong.Enabled = false;
-                    cbo_MaPhong.Enabled = false;
-                    dtp_NgayBD.Enabled = false;
-                    dtp_NgayKT.Enabled = false;
-                    txt_GhiChu.Enabled = false;
-                    cbo_MaSV.Enabled = false;
-                }
-                else
-                {
+              
                     cbo_MaPhong.Enabled = true;
                     dtp_NgayBD.Enabled = true;
                     dtp_NgayKT.Enabled = true;
@@ -312,7 +304,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
 
                     //MessageBox.Show(dgv_SVThuePhong.CurrentRow.Cells[6].Value.ToString());
 
-                }
+                
 
             }
             catch (Exception ex)

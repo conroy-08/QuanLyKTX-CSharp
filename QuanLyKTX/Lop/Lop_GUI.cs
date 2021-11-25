@@ -66,6 +66,8 @@ namespace QuanLyKTX.Lop
         {
             while (!User.FormLogin.Checked)
             {
+                User.FormLogin formLogin = new User.FormLogin();
+                formLogin.ShowDialog();
                 this.Close();
             }
             try

@@ -34,6 +34,15 @@ namespace QuanLyKTX.HoaDon
             return dataHelper.GetDataByCondition("Phong_Chiphi_Select", name, value, 1);
         }
 
+        public DataTable findByMaPhongAndMaHD(string MaPhong , string MaHD)
+        {
+            name = new string[2];
+            value = new object[2];
+            name[0] = "@MaPhong"; value[0] = MaPhong;
+            name[1] = "@MaHD"; value[1] = MaHD;
+            return dataHelper.GetDataByCondition("Phong_Chiphi_findByMaPhongAndMaHD", name, value, 2);
+
+        }
 
         public void DAL_insert_HoaDon(string MaPhong , string MaHD , int Thang , int Nam , double TienNha ,double TienDien , double TienNc , double TienVs ,
             double TienPhat, DateTime NgayHetHan,double TongTien , int TrangThai)

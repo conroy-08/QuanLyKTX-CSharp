@@ -572,7 +572,7 @@ namespace QuanLyKTX.TimKiem
             this.MaximizeBox = false;
             this.Name = "TimKiem_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TimKiem_GUI";
+            this.Text = "Tìm kiếm sinh viên";
             this.Load += new System.EventHandler(this.KhuNha_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TimKiem)).EndInit();
             this.groupBox1.ResumeLayout(false);

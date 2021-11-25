@@ -24,7 +24,7 @@ namespace QuanLyKTX
          TimKiem.TimKiem_GUI TimKiem_GUI = new TimKiem.TimKiem_GUI();
          SinhVien_DatPhong.SinhVien_ThuePhong_GUI SVThuePhong = new SinhVien_DatPhong.SinhVien_ThuePhong_GUI();
          SinhVien_TraPhong.SinhVien_TraPhong_GUI SVTraPhong = new SinhVien_TraPhong.SinhVien_TraPhong_GUI();
-
+        TimKiem.TimKiemHoaDon_GUI timKiemHoaDon = new TimKiem.TimKiemHoaDon_GUI();
         public void qlPhong()
         {
             phong.Show();
@@ -34,6 +34,10 @@ namespace QuanLyKTX
             SVThuePhong.Show();
         }
 
+        public void timkiemHoaDon()
+        {
+            timKiemHoaDon.Show();
+        }
         public void qlSVTraPhong()
         {
             SVTraPhong.Show();

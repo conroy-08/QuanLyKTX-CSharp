@@ -123,3 +123,4 @@ D:\CNTT UTC\Năm 3\Lập trình trực quan\Quan Ly KTX\QuanLyKTX\QuanLyKTX\obj\
 D:\CNTT UTC\Năm 3\Lập trình trực quan\Quan Ly KTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.pdb
 D:\CNTT UTC\Năm 3\Lập trình trực quan\Quan Ly KTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien_DatPhong.SinhVien_ThuePhong_GUI.resources
 D:\CNTT UTC\Năm 3\Lập trình trực quan\Quan Ly KTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.SinhVien_TraPhong.SinhVien_TraPhong_GUI.resources
+D:\CNTT UTC\Năm 3\Lập trình trực quan\Quan Ly KTX\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.TimKiem.TimKiemHoaDon_GUI.resources
