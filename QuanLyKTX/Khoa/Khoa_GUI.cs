@@ -25,6 +25,7 @@ namespace QuanLyKTX.Khoa
             dgv_Khoa.BackgroundColor = Color.Gray;
             dgv_Khoa.Columns[0].Width = 250;
             dgv_Khoa.Columns[1].Width = 500;
+            dgv_Khoa.AllowUserToAddRows = false;
         }
         void ShowTable()
         {

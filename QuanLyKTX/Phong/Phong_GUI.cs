@@ -55,6 +55,7 @@ namespace QuanLyKTX.Phong
             dgv_Phong.BackgroundColor = Color.Gray;
 
             dgv_Phong.Columns[6].Width = 250;
+            dgv_Phong.AllowUserToAddRows = false;
         }
 
         private void Phong_GUI_Load(object sender, EventArgs e)

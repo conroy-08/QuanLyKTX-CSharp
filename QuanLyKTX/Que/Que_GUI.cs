@@ -27,6 +27,7 @@ namespace QuanLyKTX.Que
             dgv_Que.BackgroundColor = Color.Gray;
             dgv_Que.Columns[0].Width = 250;
             dgv_Que.Columns[1].Width = 500;
+            dgv_Que.AllowUserToAddRows = false;
         }
         void ShowTable()
         {

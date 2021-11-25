@@ -25,11 +25,11 @@ namespace QuanLyKTX.SinhVien_TraPhong
             dgv_TraPhong.Columns[0].HeaderText = "Mã Số Thuê";
             dgv_TraPhong.Columns[1].HeaderText = "Ngày Trả";
             dgv_TraPhong.Columns[2].HeaderText = "Tiền Vi Phạm";
-
             dgv_TraPhong.BackgroundColor = Color.Gray;
             dgv_TraPhong.Columns[0].Width = 250;
             dgv_TraPhong.Columns[1].Width = 250;
             dgv_TraPhong.Columns[2].Width = 250;
+            dgv_TraPhong.AllowUserToAddRows = false;
             getMaSoThue1();
 
         }

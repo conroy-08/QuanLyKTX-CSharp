@@ -73,6 +73,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
             dgv_SVThuePhong.Columns[4].Width = 150;
             dgv_SVThuePhong.Columns[5].Width = 150;
             dgv_SVThuePhong.Columns[6].Width = 200;
+            dgv_SVThuePhong.AllowUserToAddRows = false;
         }
 
         // Trả textbox về rỗng

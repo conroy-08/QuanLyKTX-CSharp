@@ -25,7 +25,8 @@ namespace QuanLyKTX.KhuNha
 
             dgv_KhuNha.BackgroundColor = Color.Gray;
             dgv_KhuNha.Columns[0].Width = 250;
-            dgv_KhuNha.Columns[1].Width = 400;      
+            dgv_KhuNha.Columns[1].Width = 400;   
+            dgv_KhuNha.AllowUserToAddRows = false;
         }
         void ShowTable()
         {

@@ -58,6 +58,7 @@ namespace QuanLyKTX.SinhVien
             dgv_SinhVien.BackgroundColor = Color.Gray;
 
             dgv_SinhVien.Columns[6].Width = 300;
+            dgv_SinhVien.AllowUserToAddRows = false;
         }
 
         private void Phong_GUI_Load(object sender, EventArgs e)

@@ -96,6 +96,7 @@ namespace QuanLyKTX.User
             dtGridNV.AllowUserToAddRows = false;
             picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");
             picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+            
         }
 
         private void addItemComboBox()

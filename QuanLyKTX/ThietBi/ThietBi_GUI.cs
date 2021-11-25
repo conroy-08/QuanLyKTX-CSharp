@@ -27,6 +27,7 @@ namespace QuanLyKTX.ThietBi
             dgv_ThietBi.BackgroundColor = Color.Gray;
             dgv_ThietBi.Columns[0].Width = 250;
             dgv_ThietBi.Columns[1].Width = 400;
+            dgv_ThietBi.AllowUserToAddRows = false;
         }
 
         void ShowTable()

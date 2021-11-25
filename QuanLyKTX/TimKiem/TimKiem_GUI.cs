@@ -51,6 +51,7 @@ namespace QuanLyKTX.TimKiem
             dgv_TimKiem.Columns[11].Width = 90;
             dgv_TimKiem.Columns[12].Width = 90;
             dgv_TimKiem.Columns[13].Width = 90;
+            dgv_TimKiem.AllowUserToAddRows = false;
         }
 
         void ShowTable()

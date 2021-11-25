@@ -60,6 +60,7 @@ namespace QuanLyKTX.Lop
             dgv_Lop.Columns[0].Width = 250;
             dgv_Lop.Columns[1].Width = 250;
             dgv_Lop.Columns[2].Width = 330;
+            dgv_Lop.AllowUserToAddRows = false;
         }
 
         private void Lop_GUI_Load(object sender, EventArgs e)
