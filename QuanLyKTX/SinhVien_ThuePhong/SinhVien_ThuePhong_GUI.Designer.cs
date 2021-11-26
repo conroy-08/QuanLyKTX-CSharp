@@ -767,6 +767,7 @@ namespace QuanLyKTX.SinhVien_DatPhong
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.Name = "SinhVien_ThuePhong_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THUÊ PHÒNG";
             this.Load += new System.EventHandler(this.SV_Phong_GUI_Load);
             this.groupBox2.ResumeLayout(false);

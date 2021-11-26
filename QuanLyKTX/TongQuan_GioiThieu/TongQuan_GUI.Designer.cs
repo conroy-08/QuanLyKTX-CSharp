@@ -134,6 +134,7 @@ namespace QuanLyKTX.TongQuan_GioiThieu
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "TongQuan_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tổng Quan Về Kí Túc Xá";
             this.Load += new System.EventHandler(this.TongQuan_GUI_Load);
             this.groupBox1.ResumeLayout(false);

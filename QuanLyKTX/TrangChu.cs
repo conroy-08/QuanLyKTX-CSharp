@@ -101,7 +101,7 @@ namespace QuanLyKTX
             ShowToolStripMenuItem(User.FormLogin.QLPhong, quảnLýPhòngToolStripMenuItem);
             ShowToolStripMenuItem(User.FormLogin.QLSinhVien, quảnLýSinhViênToolStripMenuItem);
             ShowToolStripMenuItem(User.FormLogin.QLThietBi, quảnLýThiếtBịToolStripMenuItem);
-            ShowToolStripMenuItem(User.FormLogin.PhanQuyen, phânQuyềnToolStripMenuItem);
+            ShowToolStripMenuItem(User.FormLogin.PhanQuyen, phânQuyềntoolStripMenuItem);
             ShowToolStripMenuItem(User.FormLogin.QLNhanVien, QLnhânViêntoolStripMenuItem);
             ShowToolStripMenuItem(User.FormLogin.QLDanhMuc, quảnLýDanhMụcToolStripMenuItem);
             ShowToolStripMenuItem(User.FormLogin.QLPhongThietBi, quảnLýPhòngThiếtBịToolStripMenuItem);
@@ -118,17 +118,9 @@ namespace QuanLyKTX
             return helper.getTable(sql);
         }
 
-        private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TrangChu_BLL trangchu = new TrangChu_BLL();
-            trangchu.PhanQuyen();
-        }
+       
 
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TrangChu_BLL trangchu = new TrangChu_BLL();
-            trangchu.NhanVien();
-        }
+       
 
         private void tổngQuanVềKTXToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -150,29 +142,42 @@ namespace QuanLyKTX
             trangchu.qlHoaDon();
         }
 
-        private void thuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TrangChu_BLL trangchu = new TrangChu_BLL();
-            trangchu.qlSVThuePhong();
-        }
-
-        private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void trảphòngtoolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.qlSVTraPhong();
         }
 
-        private void tìmKiếmHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thuêphòngtoolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             TrangChu_BLL trangchu = new TrangChu_BLL();
-            trangchu.timkiemHoaDon();
-
+            trangchu.qlSVThuePhong();
         }
 
-        private void tìmKiếmSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tìmkiemSVtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             TrangChu_BLL trangchu = new TrangChu_BLL();
             trangchu.TimKiem();
+        }
+
+        private void tìmkiếmhóađơntoolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.timkiemHoaDon();
+        }
+
+        private void phânQuyềntoolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.PhanQuyen();
+        }
+
+        private void nhânViêntoolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            TrangChu_BLL trangchu = new TrangChu_BLL();
+            trangchu.NhanVien();
         }
     }
 }

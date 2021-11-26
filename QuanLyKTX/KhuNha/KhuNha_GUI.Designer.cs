@@ -190,9 +190,9 @@ namespace QuanLyKTX.KhuNha
             // 
             // txt_TimKiem
             // 
-            this.txt_TimKiem.Location = new System.Drawing.Point(81, 54);
+            this.txt_TimKiem.Location = new System.Drawing.Point(90, 54);
             this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(185, 22);
+            this.txt_TimKiem.Size = new System.Drawing.Size(176, 22);
             this.txt_TimKiem.TabIndex = 5;
             // 
             // btn_Thoat

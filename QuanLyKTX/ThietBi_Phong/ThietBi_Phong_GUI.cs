@@ -62,6 +62,7 @@ namespace QuanLyKTX.ThietBi_Phong
             dgv_TbiPhong.Columns[1].Width = 150;
             dgv_TbiPhong.Columns[2].Width = 130;
             dgv_TbiPhong.Columns[3].Width = 130;
+            dgv_TbiPhong.AllowUserToAddRows = false;
         }
 
         // Trả textbox về rỗng

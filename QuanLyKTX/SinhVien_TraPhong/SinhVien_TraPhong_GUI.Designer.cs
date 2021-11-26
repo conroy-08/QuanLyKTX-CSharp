@@ -600,6 +600,7 @@ namespace QuanLyKTX.SinhVien_TraPhong
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SinhVien_TraPhong_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRẢ PHÒNG";
             this.Load += new System.EventHandler(this.TraPhong_GUI_Load);
             this.groupBox2.ResumeLayout(false);
