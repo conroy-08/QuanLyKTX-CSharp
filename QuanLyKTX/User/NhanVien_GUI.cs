@@ -176,9 +176,9 @@ namespace QuanLyKTX.User
         {
             if (ktTxtChange == 0)
             {
-                if (txtMatKhau.Text.Length == 0)
+                if (txtMatKhau.Text.Length == 0 || txtMatKhau.Text.Length < 6)
                 {
-                    errorPro.SetError(txtMatKhau, "Bạn chưa nhập mật khẩu");
+                    errorPro.SetError(txtMatKhau, "Bạn chưa nhập mật khẩu - Mật khẩu phải tối thiểu 6 ký tự");
                     txtMatKhau.BackColor = Color.Pink;
                 }
                 else
