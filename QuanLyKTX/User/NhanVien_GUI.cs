@@ -379,6 +379,11 @@ namespace QuanLyKTX.User
             }
             else
             {
+                if (DateTime.Now.Year - dtNgaySinh.Value.Year < 18)
+                {
+                    MessageBox.Show("Chưa đủ 18 tuổi - Mời bạn nhập lại ngày sinh !!!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (txtMatKhau.Text == txtXacNhanMatKhau.Text )
                 {
                     try
@@ -736,15 +741,6 @@ namespace QuanLyKTX.User
             picAnh.Image = Image.FromFile(Application.StartupPath.ToString() + "\\hình\\Thumbnail\\noimage.jpg");
             picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             
-        }
-
-        private void dtNgaySinh_ValueChanged(object sender, EventArgs e)
-        {
-            if(DateTime.Now.Year - dtNgaySinh.Value.Year < 18)
-            {
-                MessageBox.Show("Chưa đủ 18 tuổi - Mời bạn nhập lại ngày sinh !!!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
         }
     }
 }
