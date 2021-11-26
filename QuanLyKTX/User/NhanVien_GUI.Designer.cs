@@ -213,6 +213,7 @@ namespace QuanLyKTX.User
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(267, 22);
             this.dtNgaySinh.TabIndex = 14;
+            this.dtNgaySinh.ValueChanged += new System.EventHandler(this.dtNgaySinh_ValueChanged);
             // 
             // txtEmail
             // 

@@ -498,7 +498,9 @@ namespace QuanLyKTX.HoaDon
                 txtTienDien.BackColor = Color.White;
                 txtTienPhat.BackColor = Color.White;
                 txtTienVeSinh.BackColor = Color.White;
-               
+
+                cmbNam.Enabled = false; cmbNam.Text = "";
+                cbThang.Enabled = false; cbThang.Text = "";
             
 
         }
